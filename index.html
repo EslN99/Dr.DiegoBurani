@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dr. Diego Ralph Burani, Medicina Intensiva e prevenção em Santo Antônio da Platina, PR. Reposição hormonal, prevenção cardiovascular e exames no consultório.">
+<title>Dr. Diego Ralph Burani</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout: faixas alternadas petróleo e gelo, conteúdo em grade de 12 colunas, CTA de agendamento a cada duas seções */
+:root{
+  --petroleo:#0B2430; --petroleo-2:#12313F; --gelo:#F1EEE8; --gelo-2:#E6E1D8;
+  --cobre:#B9784A; --cobre-escuro:#8E5A35; --aco:#5E7C8A; --texto:#0B2430; --texto-2:#3E5A67; --texto-claro:#C9D3D8; --linha:#D5D0C6; --branco:#FFFFFF;
+  --f-display:'Sora',ui-sans-serif,system-ui,sans-serif; --f-body:'Manrope',ui-sans-serif,system-ui,sans-serif;
+  --max:1240px; --sec:96px; --r:14px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--gelo);color:var(--texto);font-family:var(--f-body);font-size:16px;line-height:1.6}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-0.03em;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cobre);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.band{padding-block:var(--sec)}
+.dark{background:var(--petroleo);color:var(--gelo)}
+.alt{background:var(--gelo-2)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cobre-escuro)}
+.dark .eyebrow{color:#D9A47E}
+.h2{font-size:clamp(30px,4vw,44px);font-weight:600}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--texto-2);max-width:60ch}
+.dark .lead{color:var(--texto-claro)}
+.sec-head{display:grid;gap:16px;margin-bottom:48px;max-width:760px}
+.mark{font-family:var(--f-display);font-weight:300;letter-spacing:-0.04em;line-height:1;white-space:nowrap}
+.mark b{font-weight:600}.mark i{font-style:normal;font-weight:700;color:var(--cobre)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,background .2s ease,box-shadow .2s ease}
+.btn-cobre{background:var(--cobre);color:var(--petroleo)}
+.btn-cobre:hover{background:#C98A5C;transform:translateY(-2px);box-shadow:0 10px 24px rgba(185,120,74,.35)}
+.btn-line{border:1.5px solid currentColor}
+.btn-line:hover{background:rgba(255,255,255,.08)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(241,238,232,.94);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+.header.scrolled{border-color:var(--linha)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px}
+.header .mark{font-size:30px;text-decoration:none}
+.nav{display:flex;gap:28px}
+.nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--texto-2)}
+.nav a:hover{color:var(--texto)}
+.header .btn{min-height:46px;padding:0 22px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--linha);background:transparent;border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px;stroke:var(--texto)}
+.mobile-nav{display:none}
+@media (max-width:900px){
+  .nav,.header .btn{display:none}.burger{display:inline-flex}
+  .mobile-nav{display:block;position:fixed;left:0;right:0;top:calc(80px + env(safe-area-inset-top,0px));background:var(--gelo);border-bottom:1px solid var(--linha);padding:8px max(24px,env(safe-area-inset-right,0px)) 24px max(24px,env(safe-area-inset-left,0px))}
+  .mobile-nav a{display:block;padding:14px 0;font-weight:600;font-size:18px;text-decoration:none;border-bottom:1px solid var(--linha)}
+}
+
+/* hero */
+.hero{padding-block:72px 96px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center}
+.hero-id{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-2);font-weight:600}
+.hero h1{font-size:clamp(38px,5.2vw,64px);font-weight:600;margin-top:22px}
+.hero h1 span{color:var(--cobre-escuro)}
+.hero .lead{margin-top:22px}
+.checks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.checks svg{flex:none;width:22px;height:22px;margin-top:1px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.micro{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-size:14px;color:var(--texto-2);font-variant-numeric:tabular-nums}
+.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:var(--r);background:linear-gradient(160deg,#16384A,#0B2430);display:flex;align-items:center;justify-content:center;color:var(--texto-claro);font-size:13px;letter-spacing:.2em;text-transform:uppercase;overflow:hidden}
+.photo .pulse{position:absolute;left:0;right:0;bottom:56px;height:40px;opacity:.9}
+.photo-tag{position:absolute;left:20px;bottom:20px;right:20px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.12em;color:var(--gelo)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--petroleo-2)}
+.trust div{padding:36px 28px 8px 0;display:grid;gap:8px;align-content:start}
+.trust strong{font-family:var(--f-display);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:-0.03em;color:var(--gelo);font-variant-numeric:tabular-nums}
+.trust span{color:var(--texto-claro);font-size:15px}
+
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--branco);border:1px solid var(--linha);border-radius:var(--r);padding:30px;display:grid;gap:12px;align-content:start;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(11,36,48,.10);border-color:var(--cobre)}
+.card h3{font-size:20px;font-weight:600}
+.card p{color:var(--texto-2);font-size:15px}
+.ico{width:48px;height:48px;border-radius:12px;background:var(--petroleo);display:flex;align-items:center;justify-content:center}
+.ico svg{width:24px;height:24px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.about .photo{aspect-ratio:4/5}
+.about-txt{display:grid;gap:20px}
+.about-txt p{color:var(--texto-2);max-width:62ch}
+.timeline{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:0;border-left:2px solid var(--linha)}
+.timeline li{position:relative;padding:0 0 22px 24px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--cobre)}
+.timeline small{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--cobre-escuro);font-variant-numeric:tabular-nums}
+.timeline span{font-weight:600}
+
+/* differentials */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.diff{padding:28px;border-radius:var(--r);background:var(--petroleo-2);display:grid;gap:12px;align-content:start}
+.diff h3{font-size:19px;font-weight:600;color:var(--gelo)}
+.diff p{color:var(--texto-claro);font-size:15px}
+.diff .num{font-family:var(--f-display);font-size:14px;font-weight:700;color:#D9A47E}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;position:relative}
+.step{display:grid;gap:14px;align-content:start}
+.step .n{width:52px;height:52px;border-radius:50%;background:var(--petroleo);color:var(--gelo);font-family:var(--f-display);font-weight:600;font-size:20px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.steps::before{content:"";position:absolute;top:26px;left:26px;right:26px;height:2px;background:var(--linha)}
+.step h3{font-size:20px;font-weight:600}
+.step p{color:var(--texto-2);font-size:15px;max-width:34ch}
+.cta-inline{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;padding:28px 32px;border-radius:var(--r);background:var(--branco);border:1px solid var(--linha)}
+.cta-inline p{flex:1 1 320px;font-family:var(--f-display);font-weight:600;font-size:20px;letter-spacing:-0.02em;min-width:0}
+
+/* testimonials */
+.quote{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,4.6vw,56px);letter-spacing:-0.04em;line-height:1.08;max-width:18ch}
+.quote span{color:var(--cobre-escuro)}
+.reviews{margin-top:48px}
+.review{background:var(--branco);border:1px solid var(--linha);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px}
+.stars{color:var(--cobre);letter-spacing:3px;font-size:18px}
+.review{margin:0}
+.rv-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.review .tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cobre-escuro);border:1px solid var(--linha);border-radius:999px;padding:3px 10px}
+.review blockquote{margin:0;color:var(--texto);font-size:16px;line-height:1.65}
+.review figcaption{display:grid;gap:2px;padding-top:14px;border-top:1px solid var(--linha);margin-top:auto}
+.review figcaption strong{font-size:15px}
+.review figcaption span{font-size:13px;color:var(--texto-2)}
+
+/* location */
+.loc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:stretch}
+.map{min-height:400px;border-radius:var(--r);background:repeating-linear-gradient(0deg,transparent 0 39px,rgba(11,36,48,.06) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(11,36,48,.06) 39px 40px),var(--gelo-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--texto-2);font-size:14px}
+
+.loc-info{display:grid;gap:24px;align-content:start}
+.loc-info dl{margin:0;display:grid;gap:18px}
+.loc-info dt{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-escuro)}
+.loc-info dd{margin:4px 0 0;font-weight:500}
+
+/* faq */
+.faq{max-width:820px;display:grid;gap:0;border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:24px 0;font-family:var(--f-display);font-weight:600;font-size:18px;letter-spacing:-0.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;width:22px;height:22px;transition:transform .3s}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq details[open] summary{color:var(--cobre-escuro)}
+.faq .ans{padding:0 0 24px;color:var(--texto-2);max-width:66ch}
+
+/* final cta */
+.final{text-align:left}
+.final-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.final h2{font-size:clamp(34px,4.6vw,56px);font-weight:600;max-width:16ch}
+.final .lead{margin-top:20px}
+
+/* footer */
+.footer{background:#071820;color:var(--texto-claro);padding-block:64px 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.footer h4{margin:0 0 14px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gelo)}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.footer a{text-decoration:none}.footer a:hover{color:var(--gelo)}
+.footer .mark{font-size:36px;color:var(--gelo)}
+.foot-bottom{margin-top:48px;padding-top:24px;border-top:1px solid #1A3644;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px}
+
+/* sticky */
+.float{position:fixed;right:calc(24px + env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--cobre);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(11,36,48,.3);transition:transform .2s}
+.float:hover{transform:scale(1.07)}
+.float svg{width:28px;height:28px}
+.mbar{display:none}
+
+@media (max-width:1100px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){
+  :root{--sec:64px}
+  .hero{padding-block:40px 64px}
+  .hero-grid,.about,.loc,.final-in{grid-template-columns:minmax(0,1fr);gap:40px}
+  .hero-grid .photo{max-height:520px;width:100%}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:minmax(0,1fr);gap:28px}
+  .steps::before{top:26px;bottom:26px;left:25px;right:auto;width:2px;height:auto}
+  .step{grid-template-columns:52px minmax(0,1fr);column-gap:20px}
+  .step .n{grid-row:span 2}
+  .float{display:none}
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--gelo);border-top:1px solid var(--linha);padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mbar .btn{width:100%}
+  body{padding-bottom:84px}
+}
+@media (max-width:560px){
+  .grid3,.grid4,.foot-grid{grid-template-columns:minmax(0,1fr)}
+  .wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+  .hero-cta .btn{width:100%}
+  .trust div{padding-right:12px}
+}
+
+/* ===== Movimento ===== */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+.loader{display:none}
+.js .loader{display:flex;position:fixed;inset:0;z-index:200;background:var(--petroleo);flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .6s ease,visibility .6s ease}
+.js .loader.done{opacity:0;visibility:hidden}
+.loader .mark{font-size:clamp(44px,8vw,72px);color:var(--gelo);opacity:0;transform:translateY(16px);animation:up .7s var(--ease) .1s forwards}
+.loader .mark i{display:inline-block;transform:scale(0);animation:pop .45s var(--ease) .6s forwards}
+.loader svg{width:180px;height:20px}
+.loader path{stroke-dasharray:240;stroke-dashoffset:240;animation:draw 1s ease .35s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.5)}100%{transform:scale(1)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+.progress{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:3px;z-index:70;background:var(--cobre);transform:scaleX(0);transform-origin:left}
+
+.header{transition:border-color .2s,transform .4s var(--ease)}
+.header.hide{transform:translateY(-110%)}
+
+.js .hero .hl{opacity:0;transform:translateY(26px);animation:up .9s var(--ease) forwards;animation-delay:var(--d,0ms)}
+.js .hero .photo{clip-path:inset(100% 0 0 0);animation:reveal 1.2s var(--ease) forwards;animation-delay:1.25s}
+@keyframes reveal{to{clip-path:inset(0 0 0 0)}}
+.photo .lp{stroke-dasharray:500;stroke-dashoffset:500}
+.js .hero .photo .lp{animation:draw 1.6s ease 2s forwards,beat 2.4s ease-in-out 3.6s infinite}
+@keyframes beat{0%,100%{opacity:.9}50%{opacity:.35}}
+.photo-in{will-change:transform}
+
+.js .rv{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv-scale{transform:scale(.96)}
+
+.js .steps::before{transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease) .3s}
+.js .steps.drawn::before{transform:none}
+@media (max-width:900px){.js .steps::before{transform:scaleY(0);transform-origin:top}.js .steps.drawn::before{transform:none}}
+
+.timeline li::before{transition:transform .5s var(--ease)}
+.js .timeline li.rv::before{transform:scale(0)}
+.js .timeline li.rv.in::before{transform:scale(1);transition-delay:calc(var(--d,0ms) + 250ms)}
+
+.btn-cobre{position:relative;overflow:hidden;isolation:isolate}
+.btn-cobre::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn-cobre:hover::after{transform:translateX(120%)}
+
+/* diferenciais: hover e grow */
+.diff{position:relative;overflow:hidden;border:1px solid transparent;transition:flex-grow .55s var(--ease),transform .45s var(--ease),background .3s,border-color .3s,box-shadow .45s,opacity .3s}
+.diff::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--cobre);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.diff h3{transition:color .3s}
+@media (hover:hover){
+  .diff:hover{background:#163E51;border-color:rgba(185,120,74,.55);transform:translateY(-8px) scale(1.03);box-shadow:0 26px 50px rgba(0,0,0,.35)}
+  .diff:hover::after{transform:scaleX(1)}
+  .diff:hover h3{color:#E2B48F}
+  .grid4:hover .diff:not(:hover){opacity:.55}
+}
+@media (min-width:1101px){
+  .grid4{display:flex;align-items:stretch}
+  .diff{flex:1 1 0;min-width:0}
+}
+@media (min-width:1101px) and (hover:hover){
+  .diff:hover{flex-grow:1.6;transform:translateY(-8px)}
+}
+/* foto do Dr. Diego */
+.photo img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 16%}
+.photo img{object-position:50% 12%}
+.about .photo img{object-position:50% 40%}
+.photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(11,36,48,.88) 0%,rgba(11,36,48,.25) 38%,transparent 60%)}
+.about .photo::after{background:linear-gradient(to top,rgba(11,36,48,.35),transparent 40%)}
+.photo .pulse,.photo-tag{z-index:2}
+.has-bg{position:relative;overflow:hidden;isolation:isolate}
+.has-bg::before{content:"";position:absolute;top:0;bottom:0;right:0;width:min(58%,760px);z-index:-1;background:url(diego-bg.jpg) center 18%/cover no-repeat;opacity:.2;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(to left,#000 30%,transparent 95%);mask-image:linear-gradient(to left,#000 30%,transparent 95%)}
+.bg-left::before{right:auto;left:0;-webkit-mask-image:linear-gradient(to right,#000 30%,transparent 95%);mask-image:linear-gradient(to right,#000 30%,transparent 95%);background-position:center 22%}
+@media (max-width:900px){.has-bg::before{width:100%;opacity:.12}}
+/* fachada */
+.fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
+.fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
+/* mapa antigo */
+.map .gmap{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+.map{position:relative;display:block;padding:0;overflow:hidden;background:#E3DDD2;min-height:420px}
+.map .mapsvg{position:absolute;inset:0;width:100%;height:100%;max-width:none}
+.map .blk{fill:#D7CFC2}
+.map .park{fill:#C4CFC0}
+.map .st{fill:none;stroke:#FBF8F3;stroke-width:10;stroke-linecap:round}
+.map .av{stroke-width:22;stroke:#FFFFFF}
+.map .lbl{font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.08em;fill:#5E7C8A;text-transform:uppercase}
+.map .lbl.sm{font-size:10px;fill:#6E8578}
+.map .route{fill:none;stroke:#B9784A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 10}
+.map .ring{fill:none;stroke:#B9784A;stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.map .pin{transform-box:fill-box;transform-origin:50% 100%}
+.map .zoom{transform-origin:63% 45%}
+.map-n{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--branco);color:var(--petroleo);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:700;font-size:13px;box-shadow:0 4px 12px rgba(11,36,48,.12)}
+.map-card{position:absolute;left:16px;bottom:16px;right:auto;max-width:calc(100% - 32px);background:var(--petroleo);color:var(--gelo);padding:14px 18px;border-radius:12px;display:grid;gap:2px;font-size:13px;box-shadow:0 12px 28px rgba(11,36,48,.3)}
+.map-card strong{font-family:var(--f-display);font-size:15px;letter-spacing:-0.01em}
+.map-card span{color:var(--texto-claro)}
+.map.live .ring{animation:mring 2.6s ease-out 2.2s infinite}
+.map.live .ring.r2{animation-delay:3.5s}
+.map.live .route{animation:mdash 1.2s linear infinite}
+@keyframes mring{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+@keyframes mdash{to{stroke-dashoffset:-24}}
+@keyframes mdrop{0%{opacity:0;transform:translateY(-90px)}60%{opacity:1;transform:translateY(6px)}80%{transform:translateY(-4px)}100%{opacity:1;transform:none}}
+@keyframes mzoom{from{transform:scale(1.14)}to{transform:scale(1)}}
+@keyframes mfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.js .map .st{stroke-dasharray:1300;stroke-dashoffset:1300}
+.js .map.live .st{animation:draw 1.6s ease forwards;animation-delay:var(--d,0ms)}
+.js .map .route{opacity:0;transition:opacity .6s ease 1.4s}
+.js .map.live .route{opacity:1}
+.js .map .pin{opacity:0}
+.js .map.live .pin{animation:mdrop .9s cubic-bezier(.3,1.3,.5,1) 1.6s forwards}
+.js .map.live .zoom{animation:mzoom 3.4s cubic-bezier(.2,.7,.2,1) both}
+.js .map .map-card{opacity:0}
+.js .map.live .map-card{animation:mfade .6s var(--ease) 2.3s forwards}
+@media (prefers-reduced-motion:reduce){
+  .js .map .st,.js .map .route,.js .map .pin,.js .map .map-card{stroke-dashoffset:0!important;opacity:1!important;animation:none!important;transform:none!important}
+  .map .ring,.map .zoom{animation:none!important}
+}
+.w{display:inline-block;transition:opacity .25s linear,transform .25s linear;will-change:opacity}
+.ico{transition:transform .35s var(--ease),background .25s}
+.card:hover .ico{transform:rotate(-6deg) scale(1.08);background:var(--cobre)}
+
+.float{animation:floatIn .6s var(--ease) 2.6s both}
+.float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--cobre);animation:ring 2.4s ease-out 3.4s infinite}
+@keyframes floatIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+
+.faq .ans{animation:none}
+.faq details[open] .ans{animation:up .45s var(--ease) both;opacity:0;transform:translateY(8px)}
+
+@media (prefers-reduced-motion:reduce){
+  .js .loader{display:none}
+  .js .rv,.js .hero .hl,.js .hero .photo,.faq details[open] .ans{opacity:1!important;transform:none!important;clip-path:none!important;animation:none!important}
+  .photo .lp{stroke-dashoffset:0!important;animation:none!important}
+  .js .steps::before,.js .timeline li.rv::before{transform:none!important}
+  .float,.float::before{animation:none!important}
+  .progress{display:none}
+}
+</style>
+</head>
+<body>
+
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="mark">dr<i>.</i><b>diego</b></div>
+  <svg viewBox="0 0 180 20"><path d="M2 10 H82 L87 3 L94 17 L99 10 H178" fill="none" stroke="#B9784A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a href="#inicio" class="mark" aria-label="dr.diego, início">dr<i>.</i><b>diego</b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#cuidados">Cuidados</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#local">Localização</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Agendar consulta</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu" hidden>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#local">Localização</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-id">Dr. Diego Ralph Burani · Medicina Intensiva · CRM 34408</div>
+        <h1>Prevenção com o olhar de quem <span>já tratou o pior cenário.</span></h1>
+        <p class="lead">Anos de UTI e pronto socorro viraram um método de consultório: tempo para ouvir, exames no mesmo lugar e acompanhamento de perto.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consultas de 30 a 40 minutos, sem pressa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Laboratório, ECG, Holter e MAPA no consultório</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reposição hormonal para andropausa e menopausa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Equipe que acompanha você depois da consulta</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg>Agendar pelo WhatsApp</a>
+          <a class="btn btn-line" href="#cuidados">Ver cuidados</a>
+        </div>
+        <div class="micro"><span>CRM 34408</span><span>RQE 29647</span><span>RQE 33764</span><span>Santo Antônio da Platina, PR</span></div>
+      </div>
+      <div class="photo">
+        <img src="hero-v2.jpg" alt="Dr. Diego Ralph Burani de blazer bege, sentado em um congresso médico" width="1081" height="1400">
+        <svg class="pulse" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path class="lp" d="M0 20 H170 L180 6 L192 34 L200 20 H400" fill="none" stroke="#B9784A" stroke-width="2"/></svg>
+        <div class="photo-tag"><span>MEDICINA INTENSIVA</span><span>PREVENÇÃO</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" aria-label="Trajetória em números">
+    <div class="wrap" style="padding-block:24px 48px">
+      <div class="trust">
+        <div><strong data-to="6" data-suf=" anos">6 anos</strong><span>Coordenando pronto socorro</span></div>
+        <div><strong data-to="3" data-suf=" anos">3 anos</strong><span>Coordenando UTI COVID</span></div>
+        <div><strong>30 a 40 min</strong><span>Duração de cada consulta</span></div>
+        <div><strong>2 títulos</strong><span>RQE em Medicina Intensiva e Emergência</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="cuidados">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Cuidados</div>
+        <h2 class="h2">Tratar antes que vire urgência</h2>
+        <p class="lead">Foco em quem quer chegar aos 50, 60 e 70 com energia, coração protegido e hormônios em equilíbrio.</p>
+      </div>
+      <div class="grid3">
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/></svg></div><h3>Reposição hormonal masculina</h3><p>Avaliação e tratamento da andropausa a partir dos 40 anos, com acompanhamento por exames.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div><h3>Reposição hormonal feminina</h3><p>Cuidado na transição e na menopausa para aliviar sintomas e proteger a saúde a longo prazo.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 9h6M9 15h6"/></svg></div><h3>Implantes hormonais</h3><p>Liberação contínua e estável, sem os picos e quedas comuns em outras vias.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></div><h3>Prevenção cardiovascular</h3><p>Rastreio de risco do coração com exames e plano individual de prevenção.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></div><h3>Exames no consultório</h3><p>Laboratório, eletrocardiograma, Holter, MAPA e bioimpedância sem precisar ir a outro lugar.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Emagrecimento com segurança</h3><p>Orientação sobre canetas regularizadas e alerta sobre produtos falsificados.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="sobre">
+    <div class="wrap about">
+      <div class="photo"><img src="sobre.jpg" alt="Dr. Diego Ralph Burani sentado à mesa do consultório" width="1100" height="1366" loading="lazy"></div>
+      <div class="about-txt">
+        <div class="eyebrow">Sobre</div>
+        <h2 class="h2">Dr. Diego Ralph Burani</h2>
+        <p>Médico com títulos em Medicina Intensiva e Medicina de Emergência. A paixão pelos plantões começou na faculdade e virou carreira dentro de pronto socorro e UTI.</p>
+        <p>Depois de anos tratando pacientes graves, decidiu agir antes. Levou para o consultório a mesma precisão da terapia intensiva, agora a serviço da prevenção.</p>
+        <ol class="timeline">
+          <li><small>2018</small><span>Diretor técnico de hospital</span></li>
+          <li><small>2018 a 2023</small><span>Coordenador de pronto socorro</span></li>
+          <li><small>2020 a 2023</small><span>Coordenador da UTI COVID</span></li>
+          <li><small>Hoje</small><span>Consultório focado em prevenção e hormônios</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark has-bg" aria-labelledby="dif-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Diferenciais</div>
+        <h2 class="h2" id="dif-t">O que muda na sua consulta</h2>
+      </div>
+      <div class="grid4">
+        <div class="diff"><h3>Tempo de verdade</h3><p>Consultas de 30 a 40 minutos para entender sua história completa.</p></div>
+        <div class="diff"><h3>Tudo no mesmo lugar</h3><p>Exames, terapias injetáveis e procedimentos sem sair do consultório.</p></div>
+        <div class="diff"><h3>Rede de especialistas</h3><p>Parceria com ortopedia, dermatologia e cardiologia quando você precisar.</p></div>
+        <div class="diff"><h3>Acompanhamento ativo</h3><p>A equipe entra em contato depois da consulta para acompanhar sua evolução.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="como-funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Como funciona</div>
+        <h2 class="h2">Três passos até o seu plano</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Chame no WhatsApp</h3><p>Fale com a equipe e escolha o melhor horário de segunda a sábado.</p></div>
+        <div class="step"><div class="n">2</div><h3>Consulta e exames</h3><p>Avaliação completa, com exames feitos no próprio consultório quando indicado.</p></div>
+        <div class="step"><div class="n">3</div><h3>Plano e acompanhamento</h3><p>Você sai com um plano claro e segue acompanhado pela equipe.</p></div>
+      </div>
+      <div class="cta-inline">
+        <p>Pronto para cuidar da saúde antes da urgência?</p>
+        <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Agendar consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" aria-labelledby="dep-t">
+    <div class="wrap">
+      <div class="eyebrow" id="dep-t">O que os pacientes dizem</div>
+      <p class="quote" style="margin-top:20px">“Você nos trata <span>de forma diferente.</span>”</p>
+      <div class="grid3 reviews">
+        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Cheguei achando que meu cansaço era só idade. Foram quase 40 minutos de consulta, fiz os exames ali mesmo e saí com um plano claro. Três meses depois voltei a treinar e a dormir bem. Nunca tinha sido atendido assim.”</blockquote><figcaption><strong>Paciente, 46 anos</strong><span>Reposição hormonal masculina</span></figcaption></figure>
+        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Passei por vários médicos na menopausa e ninguém me ouvia de verdade. O Dr. Diego explicou cada etapa do tratamento com calma. A secretária me ligou depois para saber como eu estava. Me senti cuidada de verdade.”</blockquote><figcaption><strong>Paciente, 53 anos</strong><span>Menopausa</span></figcaption></figure>
+        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Fui para uma avaliação do coração por histórico na família. Eletrocardiograma, Holter e exames de sangue no mesmo lugar, sem correria. Ele trata com a seriedade de quem já viu o pior cenário, mas com muita leveza.”</blockquote><figcaption><strong>Paciente, 58 anos</strong><span>Prevenção cardiovascular</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="local">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Localização</div>
+        <h2 class="h2">Onde atendemos</h2>
+      </div>
+      <div class="loc">
+        <figure class="fachada"><img src="fachada.jpg" alt="Fachada do centro médico onde o Dr. Diego atende, em Santo Antônio da Platina" width="1400" height="1045" loading="lazy"></figure>
+        <div class="loc-info">
+          <dl>
+            <div><dt>Endereço</dt><dd>Avenida Frei Guilherme Maria, 411<br>Jardim São Francisco<br>Santo Antônio da Platina, PR</dd></div>
+            <div><dt>Horários</dt><dd>Segunda a sábado<br>Manhã, tarde e noite</dd></div>
+            <div><dt>Contato</dt><dd><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></dd></div>
+            <div><dt>Convênios</dt><dd>Unimed e particular</dd></div>
+          </dl>
+          <a class="btn btn-line" href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener">Ver rota</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="duvidas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Dúvidas</div>
+        <h2 class="h2">Perguntas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Quanto tempo dura a consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Entre 30 e 40 minutos. O tempo serve para entender sua história, revisar exames e montar um plano junto com você.</p></details>
+        <details><summary>A reposição hormonal é para quem?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Para homens na andropausa e mulheres na transição ou na menopausa, sempre após avaliação clínica e exames. O objetivo é saúde e qualidade de vida, não desempenho estético.</p></details>
+        <details><summary>Por que implante e não gel?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">O implante libera o hormônio de forma contínua, com níveis mais estáveis ao longo do tempo. A indicação é individual e definida na consulta.</p></details>
+        <details><summary>Posso fazer os exames no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. Coleta laboratorial, eletrocardiograma, Holter, MAPA e bioimpedância são feitos no próprio consultório.</p></details>
+        <details><summary>Atende Unimed?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim, a consulta atende Unimed e particular. Exames, terapias e implantes podem ter condições próprias. Confirme com a equipe ao agendar.</p></details>
+        <details><summary>Como tiro dúvidas depois da consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">A equipe acompanha sua evolução. Dúvidas que exigem nova avaliação são tratadas em retorno ou no plano de acompanhamento.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark final has-bg bg-left" aria-labelledby="final-t">
+    <div class="wrap final-in">
+      <div>
+        <h2 id="final-t">Cuide da saúde enquanto ela ainda está boa.</h2>
+        <p class="lead">Agende sua avaliação e receba um plano de prevenção feito para você.</p>
+      </div>
+      <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Agendar consulta</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="display:grid;gap:14px;align-content:start">
+        <span class="mark">dr<i>.</i><b>diego</b></span>
+        <p>Medicina intensiva aplicada à prevenção.</p>
+        <a href="https://www.instagram.com/diegoralphburani/" target="_blank" rel="noopener">@diegoralphburani</a>
+      </div>
+      <div><h4>Contato</h4><ul><li>Av. Frei Guilherme Maria, 411</li><li>Santo Antônio da Platina, PR</li><li><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></li><li>Segunda a sábado</li></ul></div>
+      <div><h4>Registro</h4><ul><li>CRM 34408</li><li>RQE 29647</li><li>RQE 33764</li><li>Responsável técnico: Dr. Diego Ralph Burani</li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Cuidados</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Dr. Diego Ralph Burani</span><span>Desenvolvido por Consultório 21</span></div>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><span style="color:#0B2430;display:flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg></span></a>
+<div class="mbar"><a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg>Agendar pelo WhatsApp</a></div>
+
+<script>
+(function(){
+  var h=document.getElementById('header');
+  window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
+  var b=document.getElementById('burger'),m=document.getElementById('mobileNav');
+  b.addEventListener('click',function(){m.hidden=!m.hidden;b.setAttribute('aria-expanded',String(!m.hidden))});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.hidden=true;b.setAttribute('aria-expanded','false')})});
+  var faq=document.querySelectorAll('.faq details');
+  faq.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)faq.forEach(function(o){if(o!==d)o.open=false})})});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* carregamento */
+  var loader=document.getElementById('loader');
+  function hideLoader(){if(loader&&!loader.classList.contains('done')){loader.classList.add('done');setTimeout(function(){loader.remove()},700)}}
+  if(reduce){hideLoader()}else{setTimeout(hideLoader,1300)}
+
+  /* entrada do hero em sequência */
+  var seq=['.hero-id','.hero h1','.hero .lead','.checks li','.hero-cta','.micro'];
+  var t=1100,step=110;
+  seq.forEach(function(sel){document.querySelectorAll(sel).forEach(function(el){el.classList.add('hl');el.style.setProperty('--d',t+'ms');t+=step})});
+
+  /* revelação no scroll */
+  var groups=[
+    ['.trust div',90],['.sec-head > .eyebrow',0],['#cuidados .card',90],['.about .photo',0],['.about-txt > .eyebrow',0],
+    ['.timeline li',120],['.diff',100],['.step',140],['.review',100],
+    ['.loc > *',120],['.faq details',70],['.final-in > .btn',0],['.foot-grid > *',80]
+  ];
+  var items=[];
+  groups.forEach(function(g){document.querySelectorAll(g[0]).forEach(function(el,i){
+    var sib=el.parentElement?Array.prototype.indexOf.call(el.parentElement.children,el):i;
+    el.classList.add('rv');el.style.setProperty('--d',(Math.min(sib,6)*g[1])+'ms');items.push(el)})});
+  document.querySelectorAll('.about .photo').forEach(function(el){el.classList.add('rv-scale')});
+
+  /* texto que acende palavra por palavra conforme o scroll */
+  var scrubEls=[];
+  if(!reduce){
+    document.querySelectorAll('.sec-head .h2,.sec-head .lead,.about-txt h2,.about-txt > p,.quote,.cta-inline p,.final h2,.final .lead,.diff p,.step p').forEach(function(el){
+      var words=[],tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[],n;
+      while((n=tw.nextNode()))nodes.push(n);
+      nodes.forEach(function(tn){
+        var parts=tn.textContent.split(/(\s+)/),frag=document.createDocumentFragment();
+        parts.forEach(function(p){
+          if(!p)return;
+          if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(p));return}
+          var s=document.createElement('span');s.className='w';s.textContent=p;frag.appendChild(s);words.push(s)});
+        tn.parentNode.replaceChild(frag,tn)});
+      scrubEls.push({el:el,words:words,last:-1})});
+  }
+  function scrub(){
+    var vh=window.innerHeight;
+    scrubEls.forEach(function(o){
+      var r=o.el.getBoundingClientRect();
+      if(r.bottom<-200||r.top>vh+200)return;
+      var p=(vh*0.9-r.top)/(r.height+vh*0.35);
+      p=Math.max(0,Math.min(1,p));
+      var lit=p*(o.words.length+2);
+      if(Math.abs(lit-o.last)<0.05)return;o.last=lit;
+      o.words.forEach(function(w,i){var a=Math.max(0,Math.min(1,lit-i));w.style.opacity=(0.14+0.86*a).toFixed(2);w.style.transform=a<1?'translateY('+((1-a)*6).toFixed(1)+'px)':''})});
+  }
+
+  function count(el){
+    var to=+el.dataset.to,suf=el.dataset.suf||'',s=null;
+    function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f)}
+  function show(el){
+    if(el.classList.contains('in'))return;
+    el.classList.add('in');
+    var c=el.querySelector('[data-to]');if(c&&!reduce)count(c);
+    var d=parseInt(el.style.getPropertyValue('--d'))||0;
+    setTimeout(function(){el.classList.remove('rv','rv-scale','in');el.style.removeProperty('--d')},900+d);
+  }
+  var steps=document.querySelector('.steps');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.remove('rv','rv-scale')});if(steps)steps.classList.add('drawn')}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      if(e.target===steps){steps.classList.add('drawn')}else{show(e.target)}io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(el){io.observe(el)});if(steps)io.observe(steps);
+    setTimeout(function(){items.forEach(show);if(steps)steps.classList.add('drawn')},6000);
+  }
+
+  /* progresso, header e parallax */
+  var bar=document.getElementById('progress'),heroPhoto=document.querySelector('.hero .photo'),lastY=window.scrollY,ticking=false;
+  function frame(){
+    scrub();
+    var y=window.scrollY,max=document.documentElement.scrollHeight-window.innerHeight;
+    if(bar)bar.style.transform='scaleX('+(max>0?y/max:0)+')';
+    var open=!m.hidden;
+    if(y>400&&y>lastY+4&&!open)h.classList.add('hide');else if(y<lastY-4||y<200)h.classList.remove('hide');
+    lastY=y;
+    if(!reduce&&heroPhoto&&window.innerWidth>900&&y<1000)heroPhoto.style.translate='0 '+(y*0.08).toFixed(1)+'px';
+    ticking=false}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+  frame();
+})();
+</script>
+
+</body>
+</html>
