@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B2430">
+<title>Dr. Diego Ralph Burani · Links</title>
+<meta name="description" content="Agende sua consulta com o Dr. Diego Ralph Burani, Medicina Intensiva e prevenção em Santo Antônio da Platina, PR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: coluna única de 480px, retrato no topo dissolvendo no petróleo, links empilhados com o WhatsApp em destaque */
+:root{
+  --petroleo:#0B2430; --petroleo-2:#12313F; --petroleo-3:#173B4C; --gelo:#F1EEE8; --cobre:#B9784A; --cobre-claro:#D9A47E;
+  --texto-claro:#C9D3D8; --linha:rgba(241,238,232,.12);
+  --f-display:'Sora',ui-sans-serif,system-ui,sans-serif; --f-body:'Manrope',ui-sans-serif,system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--petroleo);color:var(--gelo);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--cobre-claro);outline-offset:3px;border-radius:12px}
+.app{max-width:480px;margin:0 auto;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+.inner{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+
+/* topo */
+.top{position:relative;height:min(118vw,540px);overflow:hidden}
+.top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform-origin:50% 30%}
+.top::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,36,48,.55) 0%,rgba(11,36,48,0) 22%,rgba(11,36,48,0) 45%,rgba(11,36,48,.85) 78%,#0B2430 100%)}
+.top-bar{position:absolute;z-index:2;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) 0 max(18px,env(safe-area-inset-left,0px))}
+.mk{font-family:var(--f-display);font-weight:300;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+.mk i{font-style:normal;font-weight:700;color:var(--cobre)}.mk b{font-weight:600}
+.top-bar .mk{font-size:26px}
+.share{width:44px;height:44px;border-radius:50%;border:1px solid rgba(241,238,232,.3);background:rgba(11,36,48,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--gelo);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.share svg{width:20px;height:20px}
+.id{position:absolute;z-index:2;left:0;right:0;bottom:6px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cobre-claro)}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cobre);box-shadow:0 0 0 0 rgba(185,120,74,.6);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(185,120,74,.6)}80%,100%{box-shadow:0 0 0 10px rgba(185,120,74,0)}}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,8.4vw,38px);letter-spacing:-.035em;line-height:1.05;margin:10px 0 6px;text-wrap:balance}
+.role{color:var(--texto-claro);font-size:15px}
+.pulse{display:block;margin-top:14px;width:150px;height:16px}
+.pulse path{stroke-dasharray:240;stroke-dashoffset:0}
+
+/* corpo */
+.reg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:18px;font-size:12.5px;color:var(--texto-claro);font-variant-numeric:tabular-nums}
+.links{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.lk{position:relative;display:flex;align-items:center;gap:14px;min-height:72px;padding:14px 16px;border-radius:18px;background:var(--petroleo-2);border:1px solid var(--linha);transition:transform .2s var(--ease),background .2s,border-color .2s}
+.lk:active{transform:scale(.98)}
+@media (hover:hover){.lk:hover{background:var(--petroleo-3);border-color:rgba(185,120,74,.5);transform:translateY(-2px)}}
+.ic{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(241,238,232,.07);display:flex;align-items:center;justify-content:center;color:var(--cobre-claro)}
+.ic svg{width:22px;height:22px}
+.tx{flex:1;min-width:0;display:grid;gap:2px}
+.tx b{font-family:var(--f-display);font-weight:600;font-size:16.5px;letter-spacing:-.01em}
+.tx small{font-size:13px;color:var(--texto-claro)}
+.go{flex:none;width:20px;height:20px;color:rgba(241,238,232,.45);transition:transform .2s var(--ease),color .2s}
+@media (hover:hover){.lk:hover .go{transform:translateX(3px);color:var(--cobre-claro)}}
+
+.lk.main{background:var(--cobre);border-color:var(--cobre);color:var(--petroleo);min-height:84px;overflow:hidden}
+.lk.main .ic{background:var(--petroleo);color:var(--gelo)}
+.lk.main .tx b{font-size:18px}
+.lk.main .tx small{color:#3A2614;font-weight:600}
+.lk.main .go{color:var(--petroleo)}
+.lk.main::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-120%);animation:shine 4.5s ease-in-out 2s infinite}
+@keyframes shine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@media (hover:hover){.lk.main:hover{background:#C98A5C;border-color:#C98A5C}}
+
+.sec-t{margin:34px 0 12px;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cobre-claro)}
+
+/* consultório */
+.place{display:block;border-radius:20px;overflow:hidden;background:var(--petroleo-2);border:1px solid var(--linha)}
+.place-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.place-img img{width:100%;height:100%;object-fit:cover;object-position:40% 62%;transition:transform .6s var(--ease)}
+@media (hover:hover){.place:hover .place-img img{transform:scale(1.04)}}
+.place-body{padding:16px 18px 18px;display:grid;gap:12px}
+.place-body b{font-family:var(--f-display);font-size:17px;font-weight:600}
+.facts{display:grid;gap:10px;font-size:14px;color:var(--texto-claro)}
+.facts div{display:flex;gap:10px;align-items:flex-start}
+.facts svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--cobre-claro)}
+.route{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:12px;border:1.5px solid rgba(241,238,232,.35);font-weight:700;font-size:15px}
+@media (hover:hover){.place:hover .route{border-color:var(--cobre);background:rgba(185,120,74,.12)}}
+
+.foot{margin-top:36px;text-align:center;display:grid;gap:10px;justify-items:center}
+.foot .mk{font-size:30px;color:var(--gelo)}
+.foot p{margin:0;font-size:12px;color:var(--texto-claro);line-height:1.7}
+.foot .sig{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,211,216,.6)}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--gelo);color:var(--petroleo);font-weight:700;font-size:14px;padding:12px 18px;border-radius:999px;transition:opacity .25s,transform .25s var(--ease);pointer-events:none;z-index:10}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* entrada */
+.js .top img{animation:zoom 1.6s var(--ease) both}
+.js .rise{opacity:0;transform:translateY(16px);animation:rise .7s var(--ease) forwards;animation-delay:var(--d,0ms)}
+.js .pulse path{stroke-dashoffset:240;animation:draw 1.2s ease .5s forwards}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:none}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  .js .top img,.js .rise,.js .pulse path,.lk.main::after,.chip::before{animation:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}
+}
+@media (min-width:520px){
+  body{background:radial-gradient(1200px 600px at 50% -10%,#12313F,#0B2430 60%)}
+  .app{padding-top:24px}
+  .top{border-radius:28px 28px 0 0;height:540px}
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <img src="retrato.jpg" alt="Dr. Diego Ralph Burani sorrindo, de blazer preto e camiseta branca" width="900" height="1118" fetchpriority="high">
+    <div class="top-bar">
+      <span class="mk" aria-label="dr.diego">dr<i>.</i><b>diego</b></span>
+      <button class="share" id="share" type="button" aria-label="Compartilhar esta página"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></button>
+    </div>
+    <div class="id inner">
+      <span class="chip rise" style="--d:300ms">Agenda aberta</span>
+      <h1 class="rise" style="--d:420ms">Dr. Diego Ralph Burani</h1>
+      <p class="role rise" style="--d:520ms;margin:0">Medicina Intensiva · Prevenção · Hormônios</p>
+      <svg class="pulse" viewBox="0 0 150 16" aria-hidden="true"><path d="M1 8 H66 L70 2 L76 14 L80 8 H149" fill="none" stroke="#B9784A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <div class="inner">
+    <div class="reg rise" style="--d:620ms"><span>CRM 34408</span><span>RQE 29647</span><span>RQE 33764</span></div>
+
+    <ul class="links">
+      <li class="rise" style="--d:700ms"><a class="lk main" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg></span>
+        <span class="tx"><b>Agendar consulta</b><small>WhatsApp · resposta da equipe</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li class="rise" style="--d:780ms"><a class="lk" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20reposi%C3%A7%C3%A3o%20hormonal." target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 9h6M9 15h6"/></svg></span>
+        <span class="tx"><b>Reposição hormonal</b><small>Andropausa e menopausa</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li class="rise" style="--d:860ms"><a class="lk" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20quero%20fazer%20uma%20avalia%C3%A7%C3%A3o%20de%20preven%C3%A7%C3%A3o%20cardiovascular." target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></span>
+        <span class="tx"><b>Check up do coração</b><small>ECG, Holter e MAPA no consultório</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li class="rise" style="--d:940ms"><a class="lk" href="../#resultados">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/><path d="M8 10l-2 2 2 2M16 10l2 2-2 2"/></svg></span>
+        <span class="tx"><b>Antes e depois</b><small>Resultados de pacientes</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li class="rise" style="--d:1020ms"><a class="lk" href="../">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></span>
+        <span class="tx"><b>Conheça o Dr. Diego</b><small>Trajetória, cuidados e método</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li class="rise" style="--d:1100ms"><a class="lk" href="../#duvidas">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg></span>
+        <span class="tx"><b>Dúvidas frequentes</b><small>Consulta, convênio e exames</small></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+    </ul>
+
+    <p class="sec-t rise" style="--d:1180ms">Consultório</p>
+    <a class="place rise" style="--d:1240ms" href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener">
+      <div class="place-img"><img src="fachada.jpg" alt="Fachada do centro médico onde o Dr. Diego atende" width="900" height="672" loading="lazy"></div>
+      <div class="place-body">
+        <b>Santo Antônio da Platina, PR</b>
+        <div class="facts">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. Frei Guilherme Maria, 411<br>Jardim São Francisco</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Segunda a sábado<br>Manhã, tarde e noite</span></div>
+        </div>
+        <span class="route"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Como chegar</span>
+      </div>
+    </a>
+
+    <footer class="foot rise" style="--d:1300ms">
+      <span class="mk">dr<i>.</i><b>diego</b></span>
+      <p>Dr. Diego Ralph Burani · CRM 34408<br>RQE 29647 · RQE 33764</p>
+      <p class="sig">Consultório 21</p>
+    </footer>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var btn=document.getElementById('share'),toast=document.getElementById('toast'),t;
+  function show(msg){toast.textContent=msg;toast.classList.add('on');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('on')},2200)}
+  btn.addEventListener('click',function(){
+    var url=location.href.split('#')[0];
+    if(navigator.share){navigator.share({title:'Dr. Diego Ralph Burani',url:url}).catch(function(){});return}
+    if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){show('Link copiado')},function(){show(url)})}else{show(url)}
+  });
+})();
+</script>
+</body>
+</html>
