@@ -271,38 +271,36 @@ a{color:inherit}
 .has-bg::before{content:"";position:absolute;top:0;bottom:0;right:0;width:min(58%,760px);z-index:-1;background:url(diego-bg.jpg) center 18%/cover no-repeat;opacity:.2;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(to left,#000 30%,transparent 95%);mask-image:linear-gradient(to left,#000 30%,transparent 95%)}
 .bg-left::before{right:auto;left:0;-webkit-mask-image:linear-gradient(to right,#000 30%,transparent 95%);mask-image:linear-gradient(to right,#000 30%,transparent 95%);background-position:center 22%}
 @media (max-width:900px){.has-bg::before{width:100%;opacity:.12}}
-/* antes e depois */
-.res-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.res-nav{display:flex;gap:10px}
-.res-btn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(241,238,232,.35);background:transparent;color:var(--gelo);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s,opacity .2s}
-.res-btn:hover:not(:disabled){background:var(--cobre);border-color:var(--cobre);color:var(--petroleo)}
-.res-btn:disabled{opacity:.3;cursor:default}
-.res-btn svg{width:22px;height:22px}
-.res-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 24px)/2);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;outline-offset:6px;border-radius:var(--r)}
-.res-track::-webkit-scrollbar{display:none}
-.res-card{scroll-snap-align:start;display:grid;gap:18px;align-content:start;min-width:0}
-.cmp{position:relative;aspect-ratio:4/3;max-width:100%;border-radius:var(--r);overflow:hidden;background:var(--petroleo-2);--pos:50%;user-select:none;-webkit-user-select:none}
-.cmp-img{position:absolute;inset:0;display:flex;align-items:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-.cmp-img img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}
-.cmp-a{background:linear-gradient(160deg,#2A4250,#12313F);color:var(--texto-claro);justify-content:flex-start;padding-left:9%}
-.cmp-b{background:linear-gradient(160deg,#5E7C8A,#3E5A67);color:var(--gelo);justify-content:flex-end;padding-right:9%;clip-path:inset(0 0 0 var(--pos))}
-.cmp-tag{position:absolute;top:14px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(11,36,48,.8);color:var(--gelo);pointer-events:none}
-.cmp-tag.l{left:14px}.cmp-tag.r{right:14px;background:var(--cobre);color:var(--petroleo)}
-.cmp-line{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:var(--gelo);z-index:2;pointer-events:none}
-.cmp-knob{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--gelo);color:var(--petroleo);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.35);transition:transform .25s var(--ease)}
-.cmp:hover .cmp-knob{transform:scale(1.1)}
-.cmp:has(.cmp-range:focus-visible) .cmp-knob{outline:2px solid var(--cobre);outline-offset:3px}
-.cmp-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3;-webkit-appearance:none;appearance:none;touch-action:pan-y}
-.res-info{display:grid;gap:6px}
-.res-k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#D9A47E}
-.res-info b{font-family:var(--f-display);font-size:22px;font-weight:600;letter-spacing:-.02em}
-.res-info p{color:var(--texto-claro);font-size:15px;max-width:52ch}
-.res-dots{display:flex;justify-content:center;gap:2px;margin-top:28px}
-.res-dots button{min-width:28px;height:28px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
-.res-dots button::before{content:"";display:block;width:10px;height:10px;border-radius:999px;background:rgba(241,238,232,.3);transition:width .3s var(--ease),background .3s}
-.res-dots button[aria-current="true"]::before{width:28px;background:var(--cobre)}
-.res-note{margin-top:16px;text-align:center;font-size:13px;color:var(--texto-claro)}
-@media (max-width:900px){.res-track{grid-auto-columns:86%;gap:16px}.res-nav{display:none}.res-head{margin-bottom:28px}}
+/* congressos */
+.cg{overflow:hidden}
+.cg-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.cg-nav{display:flex;gap:10px}
+.cg-btn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(241,238,232,.35);background:transparent;color:var(--gelo);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s,opacity .2s}
+.cg-btn:hover:not(:disabled){background:var(--cobre);border-color:var(--cobre);color:var(--petroleo)}
+.cg-btn:disabled{opacity:.3;cursor:default}
+.cg-btn svg{width:22px;height:22px}
+.cg-track{--h:440px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;outline-offset:-4px;
+  padding-left:max(24px,calc((100vw - var(--max))/2 + 24px));padding-right:max(24px,calc((100vw - var(--max))/2 + 24px));scroll-padding-left:max(24px,calc((100vw - var(--max))/2 + 24px))}
+.cg-track::-webkit-scrollbar{display:none}
+.cg-card{position:relative;flex:none;height:var(--h);aspect-ratio:var(--ar);max-width:86vw;margin:0;border-radius:var(--r);overflow:hidden;scroll-snap-align:start;background:var(--petroleo-2)}
+.cg-card img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;transition:transform .8s var(--ease)}
+.cg-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,36,48,.9) 0%,rgba(11,36,48,.35) 32%,transparent 55%);pointer-events:none}
+.cg-card figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;display:grid;gap:6px}
+.cg-tag{justify-self:start;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--cobre);color:var(--petroleo)}
+.cg-cap{font-family:var(--f-display);font-weight:600;font-size:17px;letter-spacing:-.01em;line-height:1.25;color:var(--gelo);text-wrap:balance}
+@media (hover:hover){.cg-card:hover img{transform:scale(1.05)}}
+.cg-bar{margin-top:28px;height:3px;border-radius:999px;background:rgba(241,238,232,.15);overflow:hidden}
+.cg-bar span{display:block;height:100%;width:20%;background:var(--cobre);border-radius:999px;transform-origin:left;transition:transform .2s linear}
+@media (max-width:900px){.cg-track{--h:380px;gap:12px}.cg-nav{display:none}.cg-head{margin-bottom:28px}}
+@media (max-width:480px){.cg-track{--h:340px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));scroll-padding-left:18px}.cg-cap{font-size:15px}}
+/* whatsapp oficial */
+.float{background:#25D366!important;box-shadow:0 10px 28px rgba(37,211,102,.4)!important}
+.float svg{width:34px!important;height:34px!important}
+.float:hover{background:#1EBE5A!important}
+.float::before{border-color:#25D366!important}
+.btn-wa{background:#25D366;color:#FFFFFF;font-weight:700}
+.btn-wa:hover{background:#1EBE5A}
+.btn-wa svg{width:24px;height:24px}
 /* fachada */
 .fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
 .fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
@@ -383,7 +381,7 @@ a{color:inherit}
       <a href="#cuidados">Cuidados</a>
       <a href="#sobre">Sobre</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#resultados">Resultados</a>
+      <a href="#congressos">Congressos</a>
       <a href="#local">Localização</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -394,7 +392,7 @@ a{color:inherit}
     <a href="#cuidados">Cuidados</a>
     <a href="#sobre">Sobre</a>
     <a href="#como-funciona">Como funciona</a>
-      <a href="#resultados">Resultados</a>
+      <a href="#congressos">Congressos</a>
     <a href="#local">Localização</a>
     <a href="#duvidas">Dúvidas</a>
   </nav>
@@ -507,64 +505,55 @@ a{color:inherit}
     </div>
   </section>
 
-  <section class="band dark" id="resultados" aria-labelledby="res-t">
+  <section class="band dark cg" id="congressos" aria-labelledby="cg-t">
     <div class="wrap">
-      <div class="res-head">
+      <div class="cg-head">
         <div class="sec-head" style="margin:0">
-          <div class="eyebrow">Resultados</div>
-          <h2 class="h2" id="res-t">Antes e depois do acompanhamento</h2>
-          <p class="lead">Arraste a linha sobre a foto para comparar cada caso.</p>
+          <div class="eyebrow">Atualização constante</div>
+          <h2 class="h2" id="cg-t">Congressos, palestras e mentoria</h2>
+          <p class="lead">Presença ativa nos principais encontros de medicina intensiva, emergência e reposição hormonal.</p>
         </div>
-        <div class="res-nav">
-          <button class="res-btn" id="resPrev" type="button" aria-label="Caso anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-          <button class="res-btn" id="resNext" type="button" aria-label="Próximo caso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="cg-nav">
+          <button class="cg-btn" id="cgPrev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="cg-btn" id="cgNext" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
       </div>
-      <div class="res-track" id="resTrack" tabindex="0" aria-label="Casos de antes e depois">
-        <article class="res-card" aria-label="Caso 1: Reposição hormonal masculina">
-          <div class="cmp">
-            <div class="cmp-img cmp-a"><span>[Foto antes]</span></div>
-            <div class="cmp-img cmp-b"><span>[Foto depois]</span></div>
-            <span class="cmp-tag l">Antes</span><span class="cmp-tag r">Depois</span>
-            <div class="cmp-line"><span class="cmp-knob"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
-            <input type="range" class="cmp-range" id="cmp1" min="0" max="100" value="50" aria-label="Comparar antes e depois do caso 1">
-          </div>
-          <div class="res-info"><span class="res-k">Reposição hormonal masculina</span><b>6 meses de acompanhamento</b><p>Composição corporal acompanhada por bioimpedância no consultório.</p></div>
-        </article>
-        <article class="res-card" aria-label="Caso 2: Menopausa">
-          <div class="cmp">
-            <div class="cmp-img cmp-a"><span>[Foto antes]</span></div>
-            <div class="cmp-img cmp-b"><span>[Foto depois]</span></div>
-            <span class="cmp-tag l">Antes</span><span class="cmp-tag r">Depois</span>
-            <div class="cmp-line"><span class="cmp-knob"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
-            <input type="range" class="cmp-range" id="cmp2" min="0" max="100" value="50" aria-label="Comparar antes e depois do caso 2">
-          </div>
-          <div class="res-info"><span class="res-k">Menopausa</span><b>4 meses de acompanhamento</b><p>Tratamento hormonal individualizado, com exames periódicos.</p></div>
-        </article>
-        <article class="res-card" aria-label="Caso 3: Emagrecimento com segurança">
-          <div class="cmp">
-            <div class="cmp-img cmp-a"><span>[Foto antes]</span></div>
-            <div class="cmp-img cmp-b"><span>[Foto depois]</span></div>
-            <span class="cmp-tag l">Antes</span><span class="cmp-tag r">Depois</span>
-            <div class="cmp-line"><span class="cmp-knob"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
-            <input type="range" class="cmp-range" id="cmp3" min="0" max="100" value="50" aria-label="Comparar antes e depois do caso 3">
-          </div>
-          <div class="res-info"><span class="res-k">Emagrecimento com segurança</span><b>8 meses de acompanhamento</b><p>Caneta regularizada, plano alimentar e acompanhamento médico.</p></div>
-        </article>
-        <article class="res-card" aria-label="Caso 4: Composição corporal">
-          <div class="cmp">
-            <div class="cmp-img cmp-a"><span>[Foto antes]</span></div>
-            <div class="cmp-img cmp-b"><span>[Foto depois]</span></div>
-            <span class="cmp-tag l">Antes</span><span class="cmp-tag r">Depois</span>
-            <div class="cmp-line"><span class="cmp-knob"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span></div>
-            <input type="range" class="cmp-range" id="cmp4" min="0" max="100" value="50" aria-label="Comparar antes e depois do caso 4">
-          </div>
-          <div class="res-info"><span class="res-k">Composição corporal</span><b>12 meses de acompanhamento</b><p>Ganho de massa magra aliado à prevenção cardiovascular.</p></div>
-        </article>
-      </div>
-      <div class="res-dots" id="resDots"></div>
-      <p class="res-note">Fotos publicadas com autorização por escrito dos pacientes, em caráter educativo. Resultados variam de pessoa para pessoa.</p>
     </div>
+    <div class="cg-track" id="cgTrack" tabindex="0" aria-label="Fotos de congressos e eventos">
+        <figure class="cg-card" style="--ar:1280/720">
+          <img src="congressos/c1.jpg" alt="Dr. Diego: Imersão em Reposição Hormonal e Implantes Absorvíveis" width="1280" height="720" style="object-position:50% 30%">
+          <figcaption><span class="cg-tag">Mentoria</span><span class="cg-cap">Imersão em Reposição Hormonal e Implantes Absorvíveis</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:675/900">
+          <img src="congressos/c2.jpg" alt="Dr. Diego: Morte Encefálica · Central Estadual de Transplantes do Paraná" width="675" height="900" style="object-position:60% 50%">
+          <figcaption><span class="cg-tag">Palestra</span><span class="cg-cap">Morte Encefálica · Central Estadual de Transplantes do Paraná</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:675/900">
+          <img src="congressos/c3.jpg" alt="Dr. Diego: Título de Cidadão Honorário Platinense" width="675" height="900" style="object-position:40% 30%">
+          <figcaption><span class="cg-tag">Homenagem</span><span class="cg-cap">Título de Cidadão Honorário Platinense</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:1280/720">
+          <img src="congressos/c4.jpg" alt="Dr. Diego: CBMEDE 2022 · Medicina de Emergência" width="1280" height="720" style="object-position:50% 30%" loading="lazy">
+          <figcaption><span class="cg-tag">Congresso</span><span class="cg-cap">CBMEDE 2022 · Medicina de Emergência</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:483/584">
+          <img src="congressos/c5.jpg" alt="Dr. Diego: Capacitação em atendimento de emergência" width="483" height="584" style="object-position:50% 30%" loading="lazy">
+          <figcaption><span class="cg-tag">Treinamento</span><span class="cg-cap">Capacitação em atendimento de emergência</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:1060/900">
+          <img src="congressos/c6.jpg" alt="Dr. Diego: Congresso de Medicina Intensiva" width="1060" height="900" style="object-position:30% 50%" loading="lazy">
+          <figcaption><span class="cg-tag">Congresso</span><span class="cg-cap">Congresso de Medicina Intensiva</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:1295/900">
+          <img src="congressos/c7.jpg" alt="Dr. Diego: Médicos eficientes, sociedade saudável" width="1295" height="900" style="object-position:25% 40%" loading="lazy">
+          <figcaption><span class="cg-tag">Evento</span><span class="cg-cap">Médicos eficientes, sociedade saudável</span></figcaption>
+        </figure>
+        <figure class="cg-card" style="--ar:507/900">
+          <img src="congressos/c8.jpg" alt="Dr. Diego: STIN Sem Fronteiras" width="507" height="900" style="object-position:50% 30%" loading="lazy">
+          <figcaption><span class="cg-tag">Debate</span><span class="cg-cap">STIN Sem Fronteiras</span></figcaption>
+        </figure>
+    </div>
+    <div class="wrap"><div class="cg-bar" aria-hidden="true"><span id="cgBar"></span></div></div>
   </section>
 
   <section class="band alt" aria-labelledby="dep-t">
@@ -638,14 +627,14 @@ a{color:inherit}
       </div>
       <div><h4>Contato</h4><ul><li>Av. Frei Guilherme Maria, 411</li><li>Santo Antônio da Platina, PR</li><li><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></li><li>Segunda a sábado</li></ul></div>
       <div><h4>Registro</h4><ul><li>CRM 34408</li><li>RQE 29647</li><li>RQE 33764</li><li>Responsável técnico: Dr. Diego Ralph Burani</li></ul></div>
-      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Cuidados</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Cuidados</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#congressos">Congressos</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Dr. Diego Ralph Burani</span><span>Desenvolvido por Consultório 21</span></div>
   </div>
 </footer>
 
-<a class="float" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><span style="color:#0B2430;display:flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg></span></a>
-<div class="mbar"><a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg>Agendar pelo WhatsApp</a></div>
+<a class="float" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.2a9.8 9.8 0 0 0-8.4 14.9L2.2 21.8l4.8-1.3A9.8 9.8 0 1 0 12 2.2z"/><path fill="#25D366" d="M8.6 7.4c.2-.4.5-.4.8-.4h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.2.3 0 .6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .9-.2 1.5-.3.7-1.6 1.4-2.2 1.4-.6.1-1.2.3-4-.8-3.3-1.3-5.4-4.8-5.6-5-.2-.2-1.3-1.8-1.3-3.4 0-1.6.8-2.4 1.1-2.7z"/></svg></a>
+<div class="mbar"><a class="btn btn-wa" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M12 2.2a9.8 9.8 0 0 0-8.4 14.9L2.2 21.8l4.8-1.3A9.8 9.8 0 1 0 12 2.2z"/><path fill="#25D366" d="M8.6 7.4c.2-.4.5-.4.8-.4h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.2.3 0 .6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .9-.2 1.5-.3.7-1.6 1.4-2.2 1.4-.6.1-1.2.3-4-.8-3.3-1.3-5.4-4.8-5.6-5-.2-.2-1.3-1.8-1.3-3.4 0-1.6.8-2.4 1.1-2.7z"/></svg>Agendar pelo WhatsApp</a></div>
 
 <script>
 (function(){
@@ -672,7 +661,7 @@ a{color:inherit}
   /* revelação no scroll */
   var groups=[
     ['.trust div',90],['.sec-head > .eyebrow',0],['#cuidados .card',90],['.about .photo',0],['.about-txt > .eyebrow',0],
-    ['.timeline li',120],['.diff',100],['.step',140],['.res-card',120],['.review',100],
+    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.review',100],
     ['.loc > *',120],['.faq details',70],['.final-in > .btn',0],['.foot-grid > *',80]
   ];
   var items=[];
@@ -728,29 +717,29 @@ a{color:inherit}
     setTimeout(function(){items.forEach(show);if(steps)steps.classList.add('drawn')},6000);
   }
 
-  /* antes e depois */
-  var track=document.getElementById('resTrack');
-  if(track){
-    var rcards=[].slice.call(track.querySelectorAll('.res-card')),dotsW=document.getElementById('resDots'),prev=document.getElementById('resPrev'),next=document.getElementById('resNext'),dots=[];
-    track.querySelectorAll('.cmp').forEach(function(c){var r=c.querySelector('.cmp-range');function set(){c.style.setProperty('--pos',r.value+'%')}r.addEventListener('input',set);set()});
-    function stepW(){return rcards.length>1?rcards[1].offsetLeft-rcards[0].offsetLeft:track.clientWidth}
-    function pages(){var vis=Math.max(1,Math.round((track.clientWidth+24)/stepW()));return Math.max(1,rcards.length-vis+1)}
-    function cur(){return Math.min(pages()-1,Math.round(track.scrollLeft/stepW()))}
-    function go(i){i=Math.max(0,Math.min(i,pages()-1));track.scrollTo({left:i*stepW(),behavior:reduce?'auto':'smooth'})}
-    function build(){dotsW.innerHTML='';dots=[];for(var i=0;i<pages();i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para o caso '+(i+1));b.addEventListener('click',function(){go(i)});dotsW.appendChild(b);dots.push(b)})(i)}upd()}
-    function upd(){var i=cur(),max=track.scrollWidth-track.clientWidth-4;dots.forEach(function(d,j){d.setAttribute('aria-current',j===i?'true':'false')});prev.disabled=track.scrollLeft<4;next.disabled=track.scrollLeft>=max}
-    prev.addEventListener('click',function(){go(cur()-1)});
-    next.addEventListener('click',function(){go(cur()+1)});
-    track.addEventListener('keydown',function(e){if(e.target!==track)return;if(e.key==='ArrowRight'){e.preventDefault();go(cur()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur()-1)}});
-    track.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
-    window.addEventListener('resize',build);
-    build();
+  /* congressos */
+  var cg=document.getElementById('cgTrack');
+  if(cg){
+    var cgCards=[].slice.call(cg.querySelectorAll('.cg-card')),cgPrev=document.getElementById('cgPrev'),cgNext=document.getElementById('cgNext'),cgBar=document.getElementById('cgBar'),cgAuto=null,cgUser=false;
+    function cgPad(){return parseFloat(getComputedStyle(cg).paddingLeft)||0}
+    function cgIdx(){var x=cg.scrollLeft+cgPad()+4,i=0;cgCards.forEach(function(c,j){if(c.offsetLeft<=x)i=j});return i}
+    function cgMax(){return cg.scrollWidth-cg.clientWidth}
+    function cgGo(i){i=Math.max(0,Math.min(i,cgCards.length-1));cg.scrollTo({left:Math.min(cgMax(),cgCards[i].offsetLeft-cgPad()),behavior:reduce?'auto':'smooth'})}
+    function cgUpd(){var m=cgMax(),p=m>0?cg.scrollLeft/m:1,vis=Math.min(1,cg.clientWidth/cg.scrollWidth);
+      cgBar.style.width=(vis*100)+'%';cgBar.style.transform='translateX('+(p*(1/vis-1)*100)+'%)';
+      cgPrev.disabled=cg.scrollLeft<4;cgNext.disabled=cg.scrollLeft>=m-4}
+    function stopAuto(){cgUser=true;if(cgAuto){clearInterval(cgAuto);cgAuto=null}}
+    cgPrev.addEventListener('click',function(){stopAuto();cgGo(cgIdx()-1)});
+    cgNext.addEventListener('click',function(){stopAuto();cgGo(cgIdx()+1)});
+    cg.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();stopAuto();cgGo(cgIdx()+1)}if(e.key==='ArrowLeft'){e.preventDefault();stopAuto();cgGo(cgIdx()-1)}});
+    ['pointerdown','wheel','touchstart'].forEach(function(ev){cg.addEventListener(ev,stopAuto,{passive:true})});
+    cg.addEventListener('scroll',function(){requestAnimationFrame(cgUpd)},{passive:true});
+    window.addEventListener('resize',cgUpd);cgUpd();
     if(!reduce&&'IntersectionObserver' in window){
-      var hint=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;hint.disconnect();
-        var c=rcards[0].querySelector('.cmp'),r=c.querySelector('.cmp-range'),t0=null;
-        function an(ts){if(!t0)t0=ts;var p=(ts-t0)/1800;if(p>=1){r.value=50;c.style.setProperty('--pos','50%');return}var v=50+Math.sin(p*Math.PI*2)*20;r.value=v;c.style.setProperty('--pos',v+'%');requestAnimationFrame(an)}
-        setTimeout(function(){requestAnimationFrame(an)},900)},{threshold:.5});
-      hint.observe(rcards[0]);
+      var cgIo=new IntersectionObserver(function(es){var on=es[0].isIntersecting;
+        if(on&&!cgUser&&!cgAuto){cgAuto=setInterval(function(){if(cg.matches(':hover'))return;var m=cgMax();if(cg.scrollLeft>=m-4){cg.scrollTo({left:0,behavior:'smooth'})}else{cgGo(cgIdx()+1)}},4200)}
+        if(!on&&cgAuto){clearInterval(cgAuto);cgAuto=null}},{threshold:.4});
+      cgIo.observe(cg);
     }
   }
 
