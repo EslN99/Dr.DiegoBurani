@@ -384,6 +384,25 @@ a.fachada{display:block;color:inherit}
 @media (hover:hover){a.fachada:hover img{transform:scale(1.03)}}
 .fachada img{transition:transform .6s var(--ease)}
 .loc-info dd a{text-decoration:underline;text-decoration-color:rgba(185,120,74,.5);text-underline-offset:3px}
+/* jornada de acompanhamento */
+.jr{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;position:relative}
+.jr::before{content:"";position:absolute;left:10px;right:10px;top:10px;height:2px;background:linear-gradient(90deg,var(--cobre),rgba(185,120,74,.25))}
+.jr-step{position:relative;display:grid;gap:8px;align-content:start;padding-top:40px}
+.jr-dot{position:absolute;top:0;left:0;width:22px;height:22px;border-radius:50%;background:var(--gelo-2);border:2px solid var(--cobre);box-shadow:0 0 0 6px var(--gelo-2)}
+.jr-dot::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--cobre)}
+.jr-t{font-family:var(--f-display);font-weight:600;font-size:clamp(34px,3.6vw,48px);letter-spacing:-.04em;line-height:1;color:var(--cobre-escuro)}
+.jr-step h3{font-family:var(--f-display);font-size:21px;font-weight:600;margin:4px 0 0}
+.jr-step p{color:var(--texto-2);font-size:15.5px;max-width:34ch}
+.jr-pillars{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--linha)}
+.jr-pillars div{display:grid;gap:4px;padding:22px 24px 0 0}
+.jr-pillars b{font-family:var(--f-display);font-size:16px}
+.jr-pillars span{font-size:14.5px;color:var(--texto-2)}
+@media (max-width:900px){
+  .jr{grid-template-columns:minmax(0,1fr);gap:28px;padding-left:40px}
+  .jr::before{left:10px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:linear-gradient(180deg,var(--cobre),rgba(185,120,74,.25))}
+  .jr-step{padding-top:0}.jr-dot{left:-40px}
+  .jr-pillars{grid-template-columns:minmax(0,1fr)}
+}
 /* fachada */
 .fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
 .fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
@@ -462,7 +481,7 @@ a.fachada{display:block;color:inherit}
     <a href="#inicio" class="mark" aria-label="Dr. Diego, início">Dr<i>.</i> <b>Diego</b></a>
     <nav class="nav" aria-label="Principal">
       <a href="#cuidados">Serviços</a>
-      <a href="#planos">Planos</a>
+      <a href="#planos">Acompanhamento</a>
       <a href="#sobre">Sobre</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#local">Localização</a>
@@ -473,7 +492,7 @@ a.fachada{display:block;color:inherit}
   </div>
   <nav class="mobile-nav" id="mobileNav" aria-label="Menu" hidden>
     <a href="#cuidados">Serviços</a>
-    <a href="#planos">Planos</a>
+    <a href="#planos">Acompanhamento</a>
     <a href="#sobre">Sobre</a>
     <a href="#depoimentos">Depoimentos</a>
     <a href="#local">Localização</a>
@@ -491,7 +510,7 @@ a.fachada{display:block;color:inherit}
         <ul class="checks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consulta com duração mínima de 40 minutos</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Coleta, eletrocardiograma e ecocardiograma no mesmo lugar</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Planos de acompanhamento de 3, 6 e 12 meses</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Acompanhamento estruturado de 3, 6 e 12 meses</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Equipe que acompanha você depois da consulta</li>
         </ul>
         <div class="hero-cta">
@@ -512,7 +531,7 @@ a.fachada{display:block;color:inherit}
     <div class="wrap" style="padding-block:24px 48px">
       <div class="trust">
         <div><strong data-to="40" data-suf="+ min">40+ min</strong><span>Duração mínima de cada consulta</span></div>
-        <div><strong>3, 6 e 12</strong><span>Meses de planos de acompanhamento</span></div>
+        <div><strong>3, 6 e 12</strong><span>Meses de acompanhamento estruturado</span></div>
         <div><strong>7 serviços</strong><span>Integrados em um só lugar</span></div>
         <div><strong>2 títulos</strong><span>Emergência e Medicina Intensiva</span></div>
       </div>
@@ -551,31 +570,20 @@ a.fachada{display:block;color:inherit}
   <section class="band alt" id="planos">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow">Protocolos</div>
-        <h2 class="h2">Planos de acompanhamento de 3, 6 e 12 meses</h2>
-        <p class="lead">Resultado vem de constância. Cada protocolo começa com uma consulta de no mínimo 40 minutos e segue com retornos programados.</p>
+        <div class="eyebrow">Acompanhamento</div>
+        <h2 class="h2">Prevenção é processo, não consulta única</h2>
+        <p class="lead">Todo tratamento segue um acompanhamento estruturado e focado em estilo de vida. A duração e a frequência dos retornos dependem de cada paciente e de cada condição.</p>
       </div>
-      <div class="plans">
-        <article class="plan">
-          <div class="plan-dur">3 meses</div><h3>Essencial</h3><p class="plan-desc">Para começar com um diagnóstico completo e ajustes pontuais.</p>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consulta inicial de no mínimo 40 minutos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Exames e bioimpedância de partida</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Plano individual por escrito</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retorno ao fim do ciclo</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Acompanhamento da equipe pelo WhatsApp</li></ul>
-          <p class="plan-ideal"><b>Indicado para</b>Vitaminas, micronutrientes e check-up</p>
-          <a class="btn btn-line" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%203%20meses." target="_blank" rel="noopener">Quero o plano de 3 meses</a>
-        </article>
-        <article class="plan plan-feat">
-          <span class="plan-badge">Recomendado</span><div class="plan-dur">6 meses</div><h3>Evolução</h3><p class="plan-desc">Para tratamentos que pedem ajustes ao longo do caminho.</p>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tudo do plano de 3 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retornos a cada 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Bioimpedância em cada retorno</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ajustes de dose e de medicação</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Contato direto com a equipe</li></ul>
-          <p class="plan-ideal"><b>Indicado para</b>Emagrecimento e reposição hormonal</p>
-          <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%206%20meses." target="_blank" rel="noopener">Quero o plano de 6 meses</a>
-        </article>
-        <article class="plan">
-          <div class="plan-dur">12 meses</div><h3>Longevidade</h3><p class="plan-desc">Para mudar de verdade a saúde ao longo de um ano.</p>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tudo do plano de 6 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retornos programados durante o ano</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Check-up anual com ECG e ecocardiograma</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reavaliação completa no fim do ciclo</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Prioridade de agenda</li></ul>
-          <p class="plan-ideal"><b>Indicado para</b>Sarcopenia, obesidade e prevenção cardiovascular</p>
-          <a class="btn btn-line" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%2012%20meses." target="_blank" rel="noopener">Quero o plano de 12 meses</a>
-        </article>
+      <ol class="jr">
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">3 meses</span><h3>Base</h3><p>Diagnóstico completo, exames e primeiros ajustes de alimentação, sono, exercício e tratamento.</p></li>
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">6 meses</span><h3>Ajuste</h3><p>Reavaliação com bioimpedância e exames de controle. O plano muda conforme a resposta do seu corpo.</p></li>
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">12 meses</span><h3>Consolidação</h3><p>Hábitos consolidados e check-up para manter os resultados a longo prazo.</p></li>
+      </ol>
+      <div class="jr-pillars">
+        <div><b>Individual</b><span>Definido para cada paciente e cada condição.</span></div>
+        <div><b>Estruturado</b><span>Retornos e exames programados desde o início.</span></div>
+        <div><b>Estilo de vida</b><span>Alimentação, sono, exercício e saúde hormonal juntos.</span></div>
       </div>
-      <p class="plan-note">A frequência de retornos e os exames de cada plano são definidos na consulta, conforme o seu caso.</p>
     </div>
   </section>
 
@@ -646,7 +654,7 @@ a.fachada{display:block;color:inherit}
       <div class="steps">
         <div class="step"><div class="n">1</div><h3>Chame no WhatsApp</h3><p>Fale com a equipe e escolha o melhor horário de segunda a sábado.</p></div>
         <div class="step"><div class="n">2</div><h3>Consulta de no mínimo 40 minutos</h3><p>Avaliação completa, com coleta e exames no próprio consultório quando indicado.</p></div>
-        <div class="step"><div class="n">3</div><h3>Plano de 3, 6 ou 12 meses</h3><p>Você sai com um protocolo claro e segue acompanhado pela equipe.</p></div>
+        <div class="step"><div class="n">3</div><h3>Acompanhamento estruturado</h3><p>Retornos em 3, 6 e 12 meses, conforme o seu caso, sempre com a equipe por perto.</p></div>
       </div>
       <div class="cta-inline">
         <p>Cuidando da sua saúde de forma Intensiva.</p>
@@ -760,12 +768,12 @@ a.fachada{display:block;color:inherit}
       </div>
       <div class="faq">
         <details><summary>Quanto tempo dura a consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">No mínimo 40 minutos. O tempo serve para entender sua história, revisar exames e montar um plano junto com você.</p></details>
-        <details><summary>Como funcionam os planos de 3, 6 e 12 meses?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">São protocolos de acompanhamento com retornos programados, exames de controle e contato com a equipe. O plano ideal é definido na primeira consulta.</p></details>
+        <details><summary>Como funciona o acompanhamento?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Todo tratamento tem retornos programados, geralmente em 3, 6 e 12 meses, com exames de controle e foco em estilo de vida. A duração depende de cada paciente e de cada condição.</p></details>
         <details><summary>A reposição hormonal é para quem?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Para homens na andropausa e mulheres na transição ou na menopausa, sempre após avaliação clínica e exames. O objetivo é saúde e qualidade de vida.</p></details>
         <details><summary>O que é a terapia intravenosa?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">É a aplicação de medicamentos, vitaminas ou minerais pela veia, com prescrição individual e acompanhamento da equipe, em sala própria do consultório.</p></details>
         <details><summary>O ecocardiograma é feito no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. O ecocardiograma é realizado em parceria com o cardiologista da equipe, junto com eletrocardiograma, Holter e MAPA.</p></details>
         <details><summary>Posso coletar os exames no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. A clínica tem ponto de coleta de análises clínicas integrado, então você consulta e coleta no mesmo lugar.</p></details>
-        <details><summary>Atende Unimed?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim, a consulta atende Unimed e particular. Exames, terapias, implantes e planos podem ter condições próprias. Confirme com a equipe ao agendar.</p></details>
+        <details><summary>Atende Unimed?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim, a consulta atende Unimed e particular. Exames, terapias e implantes podem ter condições próprias. Confirme com a equipe ao agendar.</p></details>
       </div>
     </div>
   </section>
@@ -791,7 +799,7 @@ a.fachada{display:block;color:inherit}
       </div>
       <div><h4>Contato</h4><ul><li>Av. Frei Guilherme Maria, 411</li><li>Santo Antônio da Platina, PR</li><li><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></li><li>Segunda a sábado</li></ul></div>
       <div><h4>Registro</h4><ul><li>CRM-PR 34408</li><li>RQE 29647</li><li>RQE 33764</li><li>Responsável técnico: Dr. Diego Ralph Burani</li></ul></div>
-      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Serviços</a></li><li><a href="#planos">Planos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#congressos">Congressos</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Serviços</a></li><li><a href="#planos">Acompanhamento</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#congressos">Congressos</a></li></ul></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Dr. Diego Ralph Burani</span><span>Desenvolvido por Consultório 21</span></div>
   </div>
@@ -825,7 +833,7 @@ a.fachada{display:block;color:inherit}
   /* revelação no scroll */
   var groups=[
     ['.trust div',90],['.sec-head > .eyebrow',0],['#cuidados .card',90],['.about .photo',0],['.about-txt > .eyebrow',0],
-    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.plan',120],['.life-ph',100],['.formacao',0],
+    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.jr-step',140],['.jr-pillars div',90],['.life-ph',100],['.formacao',0],
     ['.loc > *',120],['.faq details',70],['.final-in > .btn',0],['.foot-grid > *',80]
   ];
   var items=[];
