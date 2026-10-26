@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Dr. Diego Ralph Burani, Medicina Intensiva e prevenção em Santo Antônio da Platina, PR. Reposição hormonal, prevenção cardiovascular e exames no consultório.">
+<meta name="description" content="Dr. Diego Ralph Burani: medicina preventiva, emagrecimento, reposição hormonal, sarcopenia e check-up em Santo Antônio da Platina, PR. Consultas de no mínimo 40 minutos.">
 <title>Dr. Diego Ralph Burani</title>
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -309,6 +309,81 @@ a{color:inherit}
 .wall::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(parede.jpg) left top/auto 160% repeat-x;opacity:.16;mix-blend-mode:multiply}
 .wall-sign::before{left:auto;width:min(52%,700px);background:url(parede-placa.jpg) 30% 40%/cover no-repeat;opacity:.24;-webkit-mask-image:linear-gradient(to left,#000 35%,transparent 95%);mask-image:linear-gradient(to left,#000 35%,transparent 95%)}
 @media (max-width:900px){.wall::before{opacity:.1}.wall-sign::before{width:100%;opacity:.14;-webkit-mask-image:linear-gradient(to bottom,#000 10%,transparent 55%);mask-image:linear-gradient(to bottom,#000 10%,transparent 55%)}}
+/* serviços */
+.svc{display:flex;flex-direction:column}
+.svc p{flex:1}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.svc-tags span{font-size:12px;font-weight:600;color:var(--texto-2);background:var(--gelo);border:1px solid var(--linha);border-radius:999px;padding:4px 10px}
+.svc-wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:32px;background:var(--petroleo);border-color:var(--petroleo);color:var(--gelo)}
+.svc-wide .svc-wide-txt{display:grid;gap:12px;flex:1 1 420px;min-width:0}
+.svc-wide p{color:var(--texto-claro)}
+.svc-wide .ico{background:var(--cobre)}
+.svc-wide .svc-tags span{background:rgba(241,238,232,.08);border-color:rgba(241,238,232,.18);color:var(--gelo)}
+.svc-ecg{flex:1 1 320px;height:120px;min-width:0}
+@media (max-width:900px){.svc-wide{flex-direction:column;align-items:stretch}.svc-ecg{flex:none;width:100%;height:80px}}
+/* faixa de frase */
+.cta-band{background:var(--cobre);color:var(--petroleo)}
+.cta-band-in{display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding-block:40px}
+.cta-phrase{font-family:var(--f-display);font-weight:600;font-size:clamp(24px,3.2vw,38px);letter-spacing:-.03em;line-height:1.15;margin:0;max-width:22ch}
+.cta-phrase span{color:var(--gelo)}
+.cta-band .btn-cobre{background:var(--petroleo);color:var(--gelo)}
+.cta-band .btn-cobre:hover{background:#12313F}
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.plan{position:relative;background:var(--branco);border:1px solid var(--linha);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:12px;transition:transform .25s var(--ease),box-shadow .25s}
+@media (hover:hover){.plan:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,36,48,.12)}}
+.plan-feat{background:var(--petroleo);border-color:var(--petroleo);color:var(--gelo)}
+.plan-badge{position:absolute;top:-13px;left:28px;background:var(--cobre);color:var(--petroleo);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.plan-dur{font-family:var(--f-display);font-weight:600;font-size:44px;letter-spacing:-.04em;line-height:1;color:var(--cobre-escuro)}
+.plan-feat .plan-dur{color:#D9A47E}
+.plan h3{font-family:var(--f-display);font-size:22px;font-weight:600;margin:0}
+.plan-desc{color:var(--texto-2);font-size:15px}
+.plan-feat .plan-desc,.plan-feat .plan-ideal{color:var(--texto-claro)}
+.plan ul{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:10px;flex:1}
+.plan li{display:flex;gap:10px;font-size:15px;align-items:flex-start}
+.plan li svg{flex:none;width:20px;height:20px;margin-top:1px}
+.plan-ideal{font-size:14px;color:var(--texto-2);border-top:1px solid var(--linha);padding-top:14px;display:grid;gap:2px}
+.plan-feat .plan-ideal{border-color:rgba(241,238,232,.15)}
+.plan-ideal b{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cobre-escuro)}
+.plan-feat .plan-ideal b{color:#D9A47E}
+.plan .btn{margin-top:6px}
+.plan-feat .btn-line{color:var(--gelo)}
+.plan-note{margin-top:24px;font-size:13px;color:var(--texto-2);text-align:center}
+@media (max-width:900px){.plans{grid-template-columns:minmax(0,1fr);gap:28px}}
+/* sobre */
+.formacao{display:grid;gap:10px;padding:16px 18px;border-radius:12px;background:var(--gelo-2);border:1px solid var(--linha)}
+.formacao-t{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-escuro)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:13.5px;font-weight:600;background:var(--branco);border:1px solid var(--linha);border-radius:999px;padding:6px 12px}
+/* estilo de vida */
+.life-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.life-txt{display:grid;gap:18px}
+.life-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.life-list li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.life-list svg{flex:none;width:22px;height:22px}
+.life-grid{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.life-ph{margin:0;border-radius:var(--r);background:linear-gradient(160deg,#173B4C,#12313F);border:1px dashed rgba(241,238,232,.25);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-claro);overflow:hidden;position:relative}
+.life-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.lp-a{grid-row:span 2}
+@media (max-width:900px){.life-in{grid-template-columns:minmax(0,1fr);gap:32px}.life-grid{grid-template-rows:180px 180px}}
+/* depoimentos */
+.tm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.tm-btn{border-color:var(--linha);color:var(--petroleo)}
+.tm-btn:hover:not(:disabled){color:var(--petroleo)}
+.tm-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none;overscroll-behavior-x:contain;padding:4px max(24px,calc((100vw - var(--max))/2 + 24px)) 8px;scroll-padding-left:max(24px,calc((100vw - var(--max))/2 + 24px))}
+.tm-track::-webkit-scrollbar{display:none}
+.tm-track.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.tm{flex:none;width:min(380px,84vw);scroll-snap-align:start}
+.tm .stars{margin-top:-6px}
+.tm-svc{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cobre-escuro)}
+@media (max-width:900px){.tm-nav{display:none}}
+@media (max-width:480px){.tm-track{padding-left:18px;padding-right:18px;scroll-padding-left:18px}}
+/* localização */
+a.fachada{display:block;color:inherit}
+.map-pill{position:absolute;left:16px;bottom:16px;background:var(--petroleo);color:var(--gelo);font-size:13px;font-weight:700;padding:10px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(11,36,48,.3)}
+@media (hover:hover){a.fachada:hover img{transform:scale(1.03)}}
+.fachada img{transition:transform .6s var(--ease)}
+.loc-info dd a{text-decoration:underline;text-decoration-color:rgba(185,120,74,.5);text-underline-offset:3px}
 /* fachada */
 .fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
 .fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
@@ -386,10 +461,10 @@ a{color:inherit}
   <div class="wrap header-in">
     <a href="#inicio" class="mark" aria-label="Dr. Diego, início">Dr<i>.</i> <b>Diego</b></a>
     <nav class="nav" aria-label="Principal">
-      <a href="#cuidados">Cuidados</a>
+      <a href="#cuidados">Serviços</a>
+      <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#congressos">Congressos</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#local">Localização</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -397,10 +472,10 @@ a{color:inherit}
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <nav class="mobile-nav" id="mobileNav" aria-label="Menu" hidden>
-    <a href="#cuidados">Cuidados</a>
+    <a href="#cuidados">Serviços</a>
+    <a href="#planos">Planos</a>
     <a href="#sobre">Sobre</a>
-    <a href="#como-funciona">Como funciona</a>
-      <a href="#congressos">Congressos</a>
+    <a href="#depoimentos">Depoimentos</a>
     <a href="#local">Localização</a>
     <a href="#duvidas">Dúvidas</a>
   </nav>
@@ -410,36 +485,36 @@ a{color:inherit}
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="hero-id">Dr. Diego Ralph Burani · Medicina Intensiva · CRM-PR 34408</div>
-        <h1>Prevenção com o olhar de quem <span>já tratou o pior cenário.</span></h1>
-        <p class="lead">Anos de UTI e pronto socorro viraram um método de consultório: tempo para ouvir, exames no mesmo lugar e acompanhamento de perto.</p>
+        <div class="hero-id">Dr. Diego Ralph Burani · Medicina preventiva · CRM-PR 34408</div>
+        <h1>Saúde, performance e longevidade <span>com cuidado intensivo.</span></h1>
+        <p class="lead">Medicina preventiva, emagrecimento, reposição hormonal e ganho de massa muscular, com acompanhamento de perto.</p>
         <ul class="checks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consultas de 30 a 40 minutos, sem pressa</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Laboratório, ECG, Holter e MAPA no consultório</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reposição hormonal para andropausa e menopausa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consulta com duração mínima de 40 minutos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Coleta, eletrocardiograma e ecocardiograma no mesmo lugar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Planos de acompanhamento de 3, 6 e 12 meses</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Equipe que acompanha você depois da consulta</li>
         </ul>
         <div class="hero-cta">
           <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg>Agendar pelo WhatsApp</a>
-          <a class="btn btn-line" href="#cuidados">Ver cuidados</a>
+          <a class="btn btn-line" href="#cuidados">Ver serviços</a>
         </div>
         <div class="micro"><span>CRM-PR 34408</span><span>RQE 29647</span><span>RQE 33764</span><span>Santo Antônio da Platina, PR</span></div>
       </div>
       <div class="photo">
         <img src="hero-v2.jpg" alt="Dr. Diego Ralph Burani de blazer bege, sentado em um congresso médico" width="1081" height="1400">
         <svg class="pulse" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"><path class="lp" d="M2.0 42.0 L145.0 42.0 C148.6 42.0 149.5 32.4 153.1 32.4 C156.7 32.4 157.6 42.0 161.2 42.0 L168.4 42.0 L171.1 46.4 L175.2 5.0 L179.7 56.1 L182.8 42.0 L191.8 42.0 C197.2 42.0 200.8 26.5 208.0 26.5 C215.2 26.5 218.8 42.0 224.2 42.0 L398.0 42.0" fill="none" stroke="#B9784A" stroke-width="2"/></svg>
-        <div class="photo-tag"><span>MEDICINA INTENSIVA</span><span>PREVENÇÃO</span></div>
+        <div class="photo-tag"><span>PREVENÇÃO</span><span>PERFORMANCE</span></div>
       </div>
     </div>
   </section>
 
-  <section class="dark" aria-label="Trajetória em números">
+  <section class="dark" aria-label="Destaques">
     <div class="wrap" style="padding-block:24px 48px">
       <div class="trust">
-        <div><strong data-to="6" data-suf=" anos">6 anos</strong><span>Coordenando pronto socorro</span></div>
-        <div><strong data-to="3" data-suf=" anos">3 anos</strong><span>Coordenando UTI COVID</span></div>
-        <div><strong>30 a 40 min</strong><span>Duração de cada consulta</span></div>
-        <div><strong>2 títulos</strong><span>RQE em Medicina Intensiva e Emergência</span></div>
+        <div><strong data-to="40" data-suf=" min">40 min</strong><span>Duração mínima de cada consulta</span></div>
+        <div><strong>3, 6 e 12</strong><span>Meses de planos de acompanhamento</span></div>
+        <div><strong>7 serviços</strong><span>Integrados em um só lugar</span></div>
+        <div><strong>2 títulos</strong><span>Emergência e Medicina Intensiva</span></div>
       </div>
     </div>
   </section>
@@ -447,36 +522,60 @@ a{color:inherit}
   <section class="band wall wall-sign" id="cuidados">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow">Cuidados</div>
-        <h2 class="h2">Tratar antes que vire urgência</h2>
-        <p class="lead">Foco em quem quer chegar aos 50, 60 e 70 com energia, coração protegido e hormônios em equilíbrio.</p>
+        <div class="eyebrow">Serviços</div>
+        <h2 class="h2">Prevenção, performance e qualidade de vida</h2>
+        <p class="lead">Para quem quer emagrecer, ganhar força, equilibrar os hormônios e proteger o coração, com acompanhamento de perto.</p>
       </div>
       <div class="grid3">
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/></svg></div><h3>Reposição hormonal masculina</h3><p>Avaliação e tratamento da andropausa a partir dos 40 anos, com acompanhamento por exames.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div><h3>Reposição hormonal feminina</h3><p>Cuidado na transição e na menopausa para aliviar sintomas e proteger a saúde a longo prazo.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 9h6M9 15h6"/></svg></div><h3>Implantes hormonais</h3><p>Liberação contínua e estável, sem os picos e quedas comuns em outras vias.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></div><h3>Prevenção cardiovascular</h3><p>Rastreio de risco do coração com exames e plano individual de prevenção.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></div><h3>Exames no consultório</h3><p>Laboratório, eletrocardiograma, Holter, MAPA e bioimpedância sem precisar ir a outro lugar.</p></article>
-        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Emagrecimento com segurança</h3><p>Orientação sobre canetas regularizadas e alerta sobre produtos falsificados.</p></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M5 12H3M21 12h-2"/><circle cx="12" cy="12" r="5"/></svg></div><h3>Reposição e implantes hormonais</h3><p>Reposição hormonal masculina e feminina, com implantes para liberação estável e acompanhamento por exames.</p><div class="svc-tags"><span>Andropausa</span><span>Menopausa</span><span>Implantes</span></div></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16l3-5 3 3 4-7"/><path d="M17 7h3v3"/></svg></div><h3>Emagrecimento</h3><p>Programas para perda de peso e tratamento da obesidade, com plano alimentar, medicação quando indicada e bioimpedância.</p><div class="svc-tags"><span>Obesidade</span><span>Bioimpedância</span><span>Canetas regularizadas</span></div></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></div><h3>Sarcopenia e ganho de massa muscular</h3><p>Acompanhamento para idosos e pacientes com perda de massa muscular, para recuperar força, mobilidade e autonomia.</p><div class="svc-tags"><span>Idosos</span><span>Força</span><span>Autonomia</span></div></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><circle cx="17" cy="6" r="2"/><circle cx="6" cy="17" r="2"/></svg></div><h3>Reposição de vitaminas e micronutrientes</h3><p>Correção de deficiências nutricionais identificadas nos exames, com reposição oral ou injetável.</p><div class="svc-tags"><span>Vitamina D</span><span>B12</span><span>Ferro</span></div></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2l4 4M17 7l3-3M19 9l-8 8-4 1 1-4 8-8z"/><path d="M5 19l-3 3"/></svg></div><h3>Medicamentos injetáveis e terapia intravenosa</h3><p>Aplicação de medicamentos e ativos por via intravenosa ou intramuscular, com prescrição individual, em sala estruturada no consultório.</p><div class="svc-tags"><span>Prescrição médica</span><span>Sala própria</span></div></article>
+        <article class="card svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></div><h3>Coleta de exames</h3><p>Ponto de coleta de análises clínicas integrado à clínica. Você consulta e coleta no mesmo lugar.</p><div class="svc-tags"><span>Análises clínicas</span><span>Sem deslocamento</span></div></article>
+        <article class="card svc svc-wide">
+          <div class="svc-wide-txt"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F1EEE8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></div><h3>Check-up geral e prevenção cardiovascular</h3><p>Avaliação de saúde integrada com eletrocardiograma, Holter, MAPA e ecocardiograma. O ecocardiograma é realizado em parceria com o cardiologista da equipe.</p><div class="svc-tags"><span>Eletrocardiograma</span><span>Holter</span><span>MAPA</span><span>Ecocardiograma</span></div></div>
+          <svg class="svc-ecg" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 78 H120 C128 78 130 62 138 62 C146 62 148 78 156 78 H170 L175 86 L184 10 L193 104 L199 78 H214 C226 78 232 50 246 50 C260 50 266 78 278 78 H400" fill="none" stroke="#B9784A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="band alt" id="sobre">
-    <div class="wrap about">
-      <div class="photo"><img src="sobre.jpg" alt="Dr. Diego Ralph Burani sentado à mesa do consultório" width="1100" height="1366" loading="lazy"></div>
-      <div class="about-txt">
-        <div class="eyebrow">Sobre</div>
-        <h2 class="h2">Dr. Diego Ralph Burani</h2>
-        <p>Médico com títulos em Medicina Intensiva e Medicina de Emergência. A paixão pelos plantões começou na faculdade e virou carreira dentro de pronto socorro e UTI.</p>
-        <p>Depois de anos tratando pacientes graves, decidiu agir antes. Levou para o consultório a mesma precisão da terapia intensiva, agora a serviço da prevenção.</p>
-        <ol class="timeline">
-          <li><small>2018</small><span>Diretor técnico de hospital</span></li>
-          <li><small>2018 a 2023</small><span>Coordenador de pronto socorro</span></li>
-          <li><small>2020 a 2023</small><span>Coordenador da UTI COVID</span></li>
-          <li><small>Hoje</small><span>Consultório focado em prevenção e hormônios</span></li>
-        </ol>
+  <section class="cta-band" aria-label="Agendamento">
+    <div class="wrap cta-band-in">
+      <p class="cta-phrase">Cuidando da sua saúde de forma <span>Intensiva</span></p>
+      <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M9.2 8.6c.2-.4.6-.4.8-.1l.7 1.2c.1.3 0 .6-.2.8l-.4.4c.4.9 1.2 1.7 2.1 2.1l.4-.4c.2-.2.5-.3.8-.2l1.2.7c.3.2.3.6-.1.8-.6.5-1.4.7-2.2.4-1.7-.7-3-2-3.7-3.7-.3-.8-.1-1.6.4-2.2z"/></svg>Agendar consulta</a>
+    </div>
+  </section>
+
+  <section class="band alt" id="planos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Protocolos</div>
+        <h2 class="h2">Planos de acompanhamento de 3, 6 e 12 meses</h2>
+        <p class="lead">Resultado vem de constância. Cada protocolo começa com uma consulta de no mínimo 40 minutos e segue com retornos programados.</p>
       </div>
+      <div class="plans">
+        <article class="plan">
+          <div class="plan-dur">3 meses</div><h3>Essencial</h3><p class="plan-desc">Para começar com um diagnóstico completo e ajustes pontuais.</p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Consulta inicial de no mínimo 40 minutos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Exames e bioimpedância de partida</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Plano individual por escrito</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retorno ao fim do ciclo</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Acompanhamento da equipe pelo WhatsApp</li></ul>
+          <p class="plan-ideal"><b>Indicado para</b>Vitaminas, micronutrientes e check-up</p>
+          <a class="btn btn-line" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%203%20meses." target="_blank" rel="noopener">Quero o plano de 3 meses</a>
+        </article>
+        <article class="plan plan-feat">
+          <span class="plan-badge">Recomendado</span><div class="plan-dur">6 meses</div><h3>Evolução</h3><p class="plan-desc">Para tratamentos que pedem ajustes ao longo do caminho.</p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tudo do plano de 3 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retornos a cada 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Bioimpedância em cada retorno</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ajustes de dose e de medicação</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Contato direto com a equipe</li></ul>
+          <p class="plan-ideal"><b>Indicado para</b>Emagrecimento e reposição hormonal</p>
+          <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%206%20meses." target="_blank" rel="noopener">Quero o plano de 6 meses</a>
+        </article>
+        <article class="plan">
+          <div class="plan-dur">12 meses</div><h3>Longevidade</h3><p class="plan-desc">Para mudar de verdade a saúde ao longo de um ano.</p>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tudo do plano de 6 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Retornos programados durante o ano</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Check-up anual com ECG e ecocardiograma</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reavaliação completa no fim do ciclo</li><li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Prioridade de agenda</li></ul>
+          <p class="plan-ideal"><b>Indicado para</b>Sarcopenia, obesidade e prevenção cardiovascular</p>
+          <a class="btn btn-line" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20o%20plano%20de%2012%20meses." target="_blank" rel="noopener">Quero o plano de 12 meses</a>
+        </article>
+      </div>
+      <p class="plan-note">A frequência de retornos e os exames de cada plano são definidos na consulta, conforme o seu caso.</p>
     </div>
   </section>
 
@@ -487,10 +586,53 @@ a{color:inherit}
         <h2 class="h2" id="dif-t">O que muda na sua consulta</h2>
       </div>
       <div class="grid4">
-        <div class="diff"><h3>Tempo de verdade</h3><p>Consultas de 30 a 40 minutos para entender sua história completa.</p></div>
-        <div class="diff"><h3>Tudo no mesmo lugar</h3><p>Exames, terapias injetáveis e procedimentos sem sair do consultório.</p></div>
-        <div class="diff"><h3>Rede de especialistas</h3><p>Parceria com ortopedia, dermatologia e cardiologia quando você precisar.</p></div>
+        <div class="diff"><h3>No mínimo 40 minutos</h3><p>Toda consulta tem duração mínima de 40 minutos para entender sua história completa.</p></div>
+        <div class="diff"><h3>Tudo no mesmo lugar</h3><p>Coleta, eletrocardiograma, injetáveis e ecocardiograma sem sair da clínica.</p></div>
+        <div class="diff"><h3>Rede de especialistas</h3><p>Cardiologista na equipe e parceria com ortopedia e dermatologia.</p></div>
         <div class="diff"><h3>Acompanhamento ativo</h3><p>A equipe entra em contato depois da consulta para acompanhar sua evolução.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band" id="sobre">
+    <div class="wrap about">
+      <div class="photo"><img src="sobre-jaleco.jpg" alt="Dr. Diego Ralph Burani de jaleco branco e estetoscópio, sorrindo de braços cruzados" width="900" height="962" loading="lazy" style="object-position:50% 18%"></div>
+      <div class="about-txt">
+        <div class="eyebrow">Sobre</div>
+        <h2 class="h2">Dr. Diego Ralph Burani</h2>
+        <p>Depois de anos à frente de emergências e de uma UTI Covid, o Dr. Diego decidiu cuidar das pessoas antes que elas precisassem de um leito. Hoje seu foco é medicina preventiva, estilo de vida, performance e emagrecimento.</p>
+        <p>Da terapia intensiva ele trouxe o que mais importa no consultório: olhar clínico apurado, decisões baseadas em evidência e atenção total a cada paciente.</p>
+        <div class="formacao">
+          <span class="formacao-t">Formação</span>
+          <div class="chips"><span>Medicina de Emergência · RQE 29647</span><span>Medicina Intensiva · RQE 33764</span></div>
+        </div>
+        <ol class="timeline">
+          <li><small>Gestão</small><span>Diretor Técnico do Centro Médico</span></li>
+          <li><small>2018 a 2023</small><span>Coordenador do Departamento de Emergência</span></li>
+          <li><small>2020 a 2023</small><span>Coordenador da UTI Covid</span></li>
+          <li><small>Ensino</small><span>Professor e instrutor de cursos de emergência e morte encefálica</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark life" id="estilo" aria-labelledby="life-t">
+    <div class="wrap life-in">
+      <div class="life-txt">
+        <div class="eyebrow">Estilo de vida</div>
+        <h2 class="h2" id="life-t">Ele vive o que recomenda</h2>
+        <p class="lead">Fora do consultório, o Dr. Diego treina jiu-jitsu. O tatame ensina o mesmo que ele aplica no cuidado: constância, técnica e respeito ao corpo.</p>
+        <ul class="life-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Treino regular de jiu-jitsu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sono, alimentação e exercício como base do tratamento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Família, viagens e saúde em equilíbrio</li>
+        </ul>
+      </div>
+      <div class="life-grid">
+        <figure class="life-ph lp-a"><span>[Foto no tatame]</span></figure>
+        <figure class="life-ph lp-b"><span>[Foto de treino]</span></figure>
+        <figure class="life-ph lp-c"><span>[Foto em família ou viagem]</span></figure>
       </div>
     </div>
   </section>
@@ -503,11 +645,11 @@ a{color:inherit}
       </div>
       <div class="steps">
         <div class="step"><div class="n">1</div><h3>Chame no WhatsApp</h3><p>Fale com a equipe e escolha o melhor horário de segunda a sábado.</p></div>
-        <div class="step"><div class="n">2</div><h3>Consulta e exames</h3><p>Avaliação completa, com exames feitos no próprio consultório quando indicado.</p></div>
-        <div class="step"><div class="n">3</div><h3>Plano e acompanhamento</h3><p>Você sai com um plano claro e segue acompanhado pela equipe.</p></div>
+        <div class="step"><div class="n">2</div><h3>Consulta de 40 minutos</h3><p>Avaliação completa, com coleta e exames no próprio consultório quando indicado.</p></div>
+        <div class="step"><div class="n">3</div><h3>Plano de 3, 6 ou 12 meses</h3><p>Você sai com um protocolo claro e segue acompanhado pela equipe.</p></div>
       </div>
       <div class="cta-inline">
-        <p>Pronto para cuidar da saúde antes da urgência?</p>
+        <p>Cuidando da sua saúde de forma Intensiva.</p>
         <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Agendar consulta</a>
       </div>
     </div>
@@ -564,15 +706,28 @@ a{color:inherit}
     <div class="wrap"><div class="cg-bar" aria-hidden="true"><span id="cgBar"></span></div></div>
   </section>
 
-  <section class="band alt" aria-labelledby="dep-t">
+  <section class="band alt" id="depoimentos" aria-labelledby="dep-t">
     <div class="wrap">
-      <div class="eyebrow" id="dep-t">O que os pacientes dizem</div>
-      <p class="quote" style="margin-top:20px">“Você nos trata <span>de forma diferente.</span>”</p>
-      <div class="grid3 reviews">
-        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Cheguei achando que meu cansaço era só idade. Foram quase 40 minutos de consulta, fiz os exames ali mesmo e saí com um plano claro. Três meses depois voltei a treinar e a dormir bem. Nunca tinha sido atendido assim.”</blockquote><figcaption><strong>Paciente, 46 anos</strong><span>Reposição hormonal masculina</span></figcaption></figure>
-        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Passei por vários médicos na menopausa e ninguém me ouvia de verdade. O Dr. Diego explicou cada etapa do tratamento com calma. A secretária me ligou depois para saber como eu estava. Me senti cuidada de verdade.”</blockquote><figcaption><strong>Paciente, 53 anos</strong><span>Menopausa</span></figcaption></figure>
-        <figure class="review"><div class="rv-top"><div class="stars" aria-label="5 estrelas">★★★★★</div><span class="tag">Modelo</span></div><blockquote>“Fui para uma avaliação do coração por histórico na família. Eletrocardiograma, Holter e exames de sangue no mesmo lugar, sem correria. Ele trata com a seriedade de quem já viu o pior cenário, mas com muita leveza.”</blockquote><figcaption><strong>Paciente, 58 anos</strong><span>Prevenção cardiovascular</span></figcaption></figure>
+      <div class="tm-head">
+        <div>
+          <div class="eyebrow" id="dep-t">O que os pacientes dizem</div>
+          <p class="quote" style="margin-top:20px">“Você nos trata <span>de forma diferente.</span>”</p>
+        </div>
+        <div class="cg-nav tm-nav">
+          <button class="cg-btn tm-btn" id="tmPrev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="cg-btn tm-btn" id="tmNext" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
+    </div>
+    <div class="tm-track" id="tmTrack" tabindex="0" aria-label="Depoimentos por serviço">
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Sarcopenia e massa muscular</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Meu pai, de 72 anos, já não conseguia levantar da cadeira sozinho. Com exercício orientado, ajuste da alimentação e exames periódicos, ele voltou a caminhar até a padaria. Recuperou força e, principalmente, autonomia.”</blockquote><figcaption><strong>Filha de paciente, 72 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Emagrecimento</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Eu já tinha tentado de tudo. Com o Dr. Diego entendi que obesidade é doença e precisa de tratamento. Perdi peso com acompanhamento de perto, bioimpedância a cada retorno e nenhuma promessa milagrosa.”</blockquote><figcaption><strong>Paciente, 41 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Menopausa</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Os fogachos e a insônia estavam atrapalhando meu trabalho. Na primeira consulta ele ficou mais de 40 minutos me ouvindo. Hoje durmo bem e voltei a ter disposição.”</blockquote><figcaption><strong>Paciente, 52 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Check-up e prevenção cardiovascular</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Fiz um check-up de rotina sem sentir nada. O eletrocardiograma mostrou uma alteração, o Holter confirmou uma arritmia e em poucos dias eu estava com o cardiologista. O diagnóstico precoce fez toda a diferença.”</blockquote><figcaption><strong>Paciente, 49 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Reposição e implantes hormonais</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Cansaço, falta de foco e libido baixa. Os exames mostraram testosterona baixa. Com o implante e o acompanhamento, voltei a ter energia para o trabalho e para os treinos.”</blockquote><figcaption><strong>Paciente, 47 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Vitaminas e micronutrientes</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Vivia cansada e com queda de cabelo. Os exames mostraram falta de ferro e de vitamina D. Com a reposição certa, em poucos meses me senti outra pessoa.”</blockquote><figcaption><strong>Paciente, 35 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Medicamentos injetáveis</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Fiz a reposição de ferro na veia no próprio consultório, com a equipe do meu lado o tempo todo. Ambiente tranquilo, sem precisar ir ao hospital.”</blockquote><figcaption><strong>Paciente, 38 anos</strong></figcaption></figure>
+        <figure class="review tm"><div class="rv-top"><span class="tm-svc">Coleta de exames</span><span class="tag">Modelo</span></div><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Consultei e coletei os exames na mesma manhã. No retorno já estava tudo pronto. Para quem trabalha o dia todo, faz muita diferença.”</blockquote><figcaption><strong>Paciente, 44 anos</strong></figcaption></figure>
     </div>
   </section>
 
@@ -583,15 +738,15 @@ a{color:inherit}
         <h2 class="h2">Onde atendemos</h2>
       </div>
       <div class="loc">
-        <figure class="fachada"><img src="fachada.jpg" alt="Fachada do centro médico onde o Dr. Diego atende, em Santo Antônio da Platina" width="1400" height="1045" loading="lazy"></figure>
+        <a class="fachada" href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener" aria-label="Abrir a localização da clínica no Google Maps"><img src="fachada.jpg" alt="Fachada do centro médico onde o Dr. Diego atende, em Santo Antônio da Platina" width="1400" height="1045" loading="lazy"><span class="map-pill">Abrir no Google Maps</span></a>
         <div class="loc-info">
           <dl>
-            <div><dt>Endereço</dt><dd>Avenida Frei Guilherme Maria, 411<br>Jardim São Francisco<br>Santo Antônio da Platina, PR</dd></div>
+            <div><dt>Endereço</dt><dd><a href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener">Avenida Frei Guilherme Maria, 411<br>Jardim São Francisco<br>Santo Antônio da Platina, PR</a></dd></div>
             <div><dt>Horários</dt><dd>Segunda a sábado<br>Manhã, tarde e noite</dd></div>
             <div><dt>Contato</dt><dd><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></dd></div>
             <div><dt>Convênios</dt><dd>Unimed e particular</dd></div>
           </dl>
-          <a class="btn btn-line" href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener">Ver rota</a>
+          <a class="btn btn-cobre" href="https://www.google.com.br/maps/place/Avenida+Frei+Guilherme+Maria%2C+411%2C+Jardim+S%C3%A3o+Francisco%2C+Santo+Ant%C3%B4nio+da+Platina%2C+PR%2C+86430-000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Abrir no Google Maps</a>
         </div>
       </div>
     </div>
@@ -604,12 +759,13 @@ a{color:inherit}
         <h2 class="h2">Perguntas frequentes</h2>
       </div>
       <div class="faq">
-        <details><summary>Quanto tempo dura a consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Entre 30 e 40 minutos. O tempo serve para entender sua história, revisar exames e montar um plano junto com você.</p></details>
-        <details><summary>A reposição hormonal é para quem?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Para homens na andropausa e mulheres na transição ou na menopausa, sempre após avaliação clínica e exames. O objetivo é saúde e qualidade de vida, não desempenho estético.</p></details>
-        <details><summary>Por que implante e não gel?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">O implante libera o hormônio de forma contínua, com níveis mais estáveis ao longo do tempo. A indicação é individual e definida na consulta.</p></details>
-        <details><summary>Posso fazer os exames no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. Coleta laboratorial, eletrocardiograma, Holter, MAPA e bioimpedância são feitos no próprio consultório.</p></details>
-        <details><summary>Atende Unimed?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim, a consulta atende Unimed e particular. Exames, terapias e implantes podem ter condições próprias. Confirme com a equipe ao agendar.</p></details>
-        <details><summary>Como tiro dúvidas depois da consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">A equipe acompanha sua evolução. Dúvidas que exigem nova avaliação são tratadas em retorno ou no plano de acompanhamento.</p></details>
+        <details><summary>Quanto tempo dura a consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">No mínimo 40 minutos. O tempo serve para entender sua história, revisar exames e montar um plano junto com você.</p></details>
+        <details><summary>Como funcionam os planos de 3, 6 e 12 meses?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">São protocolos de acompanhamento com retornos programados, exames de controle e contato com a equipe. O plano ideal é definido na primeira consulta.</p></details>
+        <details><summary>A reposição hormonal é para quem?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Para homens na andropausa e mulheres na transição ou na menopausa, sempre após avaliação clínica e exames. O objetivo é saúde e qualidade de vida.</p></details>
+        <details><summary>O que é a terapia intravenosa?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">É a aplicação de medicamentos, vitaminas ou minerais pela veia, com prescrição individual e acompanhamento da equipe, em sala própria do consultório.</p></details>
+        <details><summary>O ecocardiograma é feito no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. O ecocardiograma é realizado em parceria com o cardiologista da equipe, junto com eletrocardiograma, Holter e MAPA.</p></details>
+        <details><summary>Posso coletar os exames no consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim. A clínica tem ponto de coleta de análises clínicas integrado, então você consulta e coleta no mesmo lugar.</p></details>
+        <details><summary>Atende Unimed?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ans">Sim, a consulta atende Unimed e particular. Exames, terapias, implantes e planos podem ter condições próprias. Confirme com a equipe ao agendar.</p></details>
       </div>
     </div>
   </section>
@@ -617,8 +773,8 @@ a{color:inherit}
   <section class="band dark final has-bg bg-left" aria-labelledby="final-t">
     <div class="wrap final-in">
       <div>
-        <h2 id="final-t">Cuide da saúde enquanto ela ainda está boa.</h2>
-        <p class="lead">Agende sua avaliação e receba um plano de prevenção feito para você.</p>
+        <h2 id="final-t">Cuidando da sua saúde de forma Intensiva.</h2>
+        <p class="lead">Agende sua consulta de no mínimo 40 minutos e saia com um plano feito para você.</p>
       </div>
       <a class="btn btn-cobre" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Agendar consulta</a>
     </div>
@@ -630,12 +786,12 @@ a{color:inherit}
     <div class="foot-grid">
       <div style="display:grid;gap:14px;align-content:start">
         <span class="mark">Dr<i>.</i> <b>Diego</b></span>
-        <p>Medicina intensiva aplicada à prevenção.</p>
+        <p>Cuidando da sua saúde de forma Intensiva.</p>
         <a href="https://www.instagram.com/diegoralphburani/" target="_blank" rel="noopener">@diegoralphburani</a>
       </div>
       <div><h4>Contato</h4><ul><li>Av. Frei Guilherme Maria, 411</li><li>Santo Antônio da Platina, PR</li><li><a href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vim%20pelo%20site%20do%20Dr.%20Diego%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(43) 99930 4322</a></li><li>Segunda a sábado</li></ul></div>
       <div><h4>Registro</h4><ul><li>CRM-PR 34408</li><li>RQE 29647</li><li>RQE 33764</li><li>Responsável técnico: Dr. Diego Ralph Burani</li></ul></div>
-      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Cuidados</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#congressos">Congressos</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Navegação</h4><ul><li><a href="#cuidados">Serviços</a></li><li><a href="#planos">Planos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#congressos">Congressos</a></li></ul></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Dr. Diego Ralph Burani</span><span>Desenvolvido por Consultório 21</span></div>
   </div>
@@ -669,7 +825,7 @@ a{color:inherit}
   /* revelação no scroll */
   var groups=[
     ['.trust div',90],['.sec-head > .eyebrow',0],['#cuidados .card',90],['.about .photo',0],['.about-txt > .eyebrow',0],
-    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.review',100],
+    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.plan',120],['.life-ph',100],['.formacao',0],
     ['.loc > *',120],['.faq details',70],['.final-in > .btn',0],['.foot-grid > *',80]
   ];
   var items=[];
@@ -681,7 +837,7 @@ a{color:inherit}
   /* texto que acende palavra por palavra conforme o scroll */
   var scrubEls=[];
   if(!reduce){
-    document.querySelectorAll('.sec-head .h2,.sec-head .lead,.about-txt h2,.about-txt > p,.quote,.cta-inline p,.final h2,.final .lead,.diff p,.step p').forEach(function(el){
+    document.querySelectorAll('.sec-head .h2,.sec-head .lead,.about-txt h2,.about-txt > p,.quote,.cta-inline p,.cta-phrase,.final h2,.final .lead,.diff p,.step p').forEach(function(el){
       var words=[],tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[],n;
       while((n=tw.nextNode()))nodes.push(n);
       nodes.forEach(function(tn){
@@ -762,6 +918,27 @@ a{color:inherit}
         if(!on&&cgAuto){clearInterval(cgAuto);cgAuto=null}},{threshold:.4});
       cgIo.observe(cg);
     }
+  }
+
+  /* depoimentos */
+  var tm=document.getElementById('tmTrack');
+  if(tm){
+    var tmCards=[].slice.call(tm.children),tmPrev=document.getElementById('tmPrev'),tmNext=document.getElementById('tmNext'),td=null;
+    function tmPad(){return parseFloat(getComputedStyle(tm).paddingLeft)||0}
+    function tmIdx(){var x=tm.scrollLeft+tmPad()+4,i=0;tmCards.forEach(function(c,j){if(c.offsetLeft<=x)i=j});return i}
+    function tmGo(i){i=Math.max(0,Math.min(i,tmCards.length-1));tm.scrollTo({left:Math.min(tm.scrollWidth-tm.clientWidth,tmCards[i].offsetLeft-tmPad()),behavior:reduce?'auto':'smooth'})}
+    function tmUpd(){var m=tm.scrollWidth-tm.clientWidth;tmPrev.disabled=tm.scrollLeft<4;tmNext.disabled=tm.scrollLeft>=m-4}
+    tmPrev.addEventListener('click',function(){tmGo(tmIdx()-1)});
+    tmNext.addEventListener('click',function(){tmGo(tmIdx()+1)});
+    tm.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();tmGo(tmIdx()+1)}if(e.key==='ArrowLeft'){e.preventDefault();tmGo(tmIdx()-1)}});
+    tm.addEventListener('pointerdown',function(e){if(e.button>0)return;td={id:e.pointerId,x:e.clientX,y:e.clientY,sl:tm.scrollLeft,lx:e.clientX,lt:Date.now(),v:0,on:false}});
+    tm.addEventListener('pointermove',function(e){if(!td||e.pointerId!==td.id)return;var dx=e.clientX-td.x,dy=e.clientY-td.y;
+      if(!td.on){if(Math.abs(dx)<6)return;if(Math.abs(dy)>Math.abs(dx)){td=null;return}td.on=true;tm.classList.add('drag');try{tm.setPointerCapture(e.pointerId)}catch(_){}}
+      var now=Date.now();td.v=(e.clientX-td.lx)/Math.max(1,now-td.lt);td.lx=e.clientX;td.lt=now;tm.scrollLeft=td.sl-dx;e.preventDefault()});
+    function tmEnd(){if(!td)return;var was=td.on,v=td.v;td=null;if(!was)return;var i=tmIdx(),c=tmCards[i],off=(tm.scrollLeft+tmPad()-c.offsetLeft)/c.offsetWidth;
+      if(v<-0.3)i++;else if(v>0.3){}else if(off>0.5)i++;setTimeout(function(){tm.classList.remove('drag')},0);tmGo(i)}
+    tm.addEventListener('pointerup',tmEnd);tm.addEventListener('pointercancel',tmEnd);
+    tm.addEventListener('scroll',function(){requestAnimationFrame(tmUpd)},{passive:true});window.addEventListener('resize',tmUpd);tmUpd();
   }
 
   /* progresso, header e parallax */
