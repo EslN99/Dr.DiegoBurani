@@ -409,6 +409,36 @@ a.fachada{display:block;color:inherit}
 @media (hover:hover){.life-ph:hover img{transform:scale(1.05)}}
 .life-grid{grid-template-rows:240px 240px}
 @media (max-width:900px){.life-grid{grid-template-rows:200px 200px}}
+/* jornada animada */
+.js .jr::before{transform:scaleX(0);transform-origin:left;transition:transform 1.8s cubic-bezier(.6,0,.2,1)}
+.js .jr.on::before{transform:none}
+.jr::after{content:"";position:absolute;top:8px;left:10px;width:90px;height:6px;border-radius:999px;background:linear-gradient(90deg,transparent,#E2B48F,transparent);opacity:0;pointer-events:none}
+.jr.on::after{animation:jrRun 3.6s cubic-bezier(.45,0,.55,1) 2s infinite}
+@keyframes jrRun{0%{transform:translateX(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateX(calc(var(--jrw,1000px) - 110px));opacity:0}}
+.js .jr-dot{transform:scale(0);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.jr.on .jr-dot{transform:none}
+.jr-dot::before{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--cobre);opacity:0}
+.jr.on .jr-dot::before{animation:jrPing 2.4s ease-out infinite}
+@keyframes jrPing{0%{transform:scale(1);opacity:.8}70%,100%{transform:scale(2.4);opacity:0}}
+.js .jr-step>*:not(.jr-dot){opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.jr.on .jr-step>*:not(.jr-dot){opacity:1;transform:none}
+.jr-step:nth-child(1) .jr-dot,.jr-step:nth-child(1) .jr-dot::before{transition-delay:.15s;animation-delay:.6s}
+.jr-step:nth-child(2) .jr-dot,.jr-step:nth-child(2) .jr-dot::before{transition-delay:.75s;animation-delay:1.2s}
+.jr-step:nth-child(3) .jr-dot,.jr-step:nth-child(3) .jr-dot::before{transition-delay:1.35s;animation-delay:1.8s}
+.jr-step:nth-child(1)>*:not(.jr-dot){transition-delay:.3s}
+.jr-step:nth-child(2)>*:not(.jr-dot){transition-delay:.9s}
+.jr-step:nth-child(3)>*:not(.jr-dot){transition-delay:1.5s}
+.jr-step h3{transition-delay:inherit}
+@media (hover:hover){.jr-step{transition:transform .3s var(--ease)}.jr-step:hover .jr-t{color:var(--cobre)}.jr-t{transition:color .3s}}
+@media (max-width:900px){
+  .js .jr::before{transform:scaleY(0);transform-origin:top}
+  .jr::after{top:10px;left:8px;width:6px;height:80px;background:linear-gradient(180deg,transparent,#E2B48F,transparent)}
+  @keyframes jrRun{0%{transform:translateY(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(calc(var(--jrh,600px) - 100px));opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .jr::before,.js .jr-dot,.js .jr-step>*{transform:none!important;opacity:1!important;transition:none!important}
+  .jr::after,.jr-dot::before{animation:none!important;opacity:0!important}
+}
 /* fachada */
 .fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
 .fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
@@ -581,9 +611,9 @@ a.fachada{display:block;color:inherit}
         <p class="lead">Todo tratamento segue um acompanhamento estruturado e focado em estilo de vida. A duração e a frequência dos retornos dependem de cada paciente e de cada condição.</p>
       </div>
       <ol class="jr">
-        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">3 meses</span><h3>Base</h3><p>Diagnóstico completo, exames e primeiros ajustes de alimentação, sono, exercício e tratamento.</p></li>
-        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">6 meses</span><h3>Ajuste</h3><p>Reavaliação com bioimpedância e exames de controle. O plano muda conforme a resposta do seu corpo.</p></li>
-        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t">12 meses</span><h3>Consolidação</h3><p>Hábitos consolidados e check-up para manter os resultados a longo prazo.</p></li>
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t"><span class="jr-n" data-n="3">3</span> meses</span><h3>Base</h3><p>Diagnóstico completo, exames e primeiros ajustes de alimentação, sono, exercício e tratamento.</p></li>
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t"><span class="jr-n" data-n="6">6</span> meses</span><h3>Ajuste</h3><p>Reavaliação com bioimpedância e exames de controle. O plano muda conforme a resposta do seu corpo.</p></li>
+        <li class="jr-step"><span class="jr-dot" aria-hidden="true"></span><span class="jr-t"><span class="jr-n" data-n="12">12</span> meses</span><h3>Consolidação</h3><p>Hábitos consolidados e check-up para manter os resultados a longo prazo.</p></li>
       </ol>
       <div class="jr-pillars">
         <div><b>Individual</b><span>Definido para cada paciente e cada condição.</span></div>
@@ -839,7 +869,7 @@ a.fachada{display:block;color:inherit}
   /* revelação no scroll */
   var groups=[
     ['.trust div',90],['.sec-head > .eyebrow',0],['#cuidados .card',90],['.about .photo',0],['.about-txt > .eyebrow',0],
-    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.jr-step',140],['.jr-pillars div',90],['.life-ph',100],['.formacao',0],
+    ['.timeline li',120],['.diff',100],['.step',140],['.cg-card',90],['.jr-pillars div',90],['.life-ph',100],['.formacao',0],
     ['.loc > *',120],['.faq details',70],['.final-in > .btn',0],['.foot-grid > *',80]
   ];
   var items=[];
@@ -953,6 +983,19 @@ a.fachada{display:block;color:inherit}
       if(v<-0.3)i++;else if(v>0.3){}else if(off>0.5)i++;setTimeout(function(){tm.classList.remove('drag')},0);tmGo(i)}
     tm.addEventListener('pointerup',tmEnd);tm.addEventListener('pointercancel',tmEnd);
     tm.addEventListener('scroll',function(){requestAnimationFrame(tmUpd)},{passive:true});window.addEventListener('resize',tmUpd);tmUpd();
+  }
+
+  /* jornada animada */
+  var jr=document.querySelector('.jr');
+  if(jr){
+    function jrSize(){jr.style.setProperty('--jrw',jr.offsetWidth+'px');jr.style.setProperty('--jrh',jr.offsetHeight+'px')}
+    jrSize();window.addEventListener('resize',jrSize);
+    function jrGo(){if(jr.classList.contains('on'))return;jr.classList.add('on');
+      if(reduce)return;
+      [].slice.call(jr.querySelectorAll('.jr-n')).forEach(function(el,i){var to=+el.dataset.n,t0=null;el.textContent='0';
+        setTimeout(function(){function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/900,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)},300+i*600)})}
+    if(reduce||!('IntersectionObserver' in window)){jrGo()}
+    else{var jio=new IntersectionObserver(function(es){if(es[0].isIntersecting){jrGo();jio.disconnect()}},{threshold:.35});jio.observe(jr);setTimeout(jrGo,9000)}
   }
 
   /* progresso, header e parallax */
