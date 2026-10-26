@@ -403,6 +403,12 @@ a.fachada{display:block;color:inherit}
   .jr-step{padding-top:0}.jr-dot{left:-40px}
   .jr-pillars{grid-template-columns:minmax(0,1fr)}
 }
+.life-ph{border-style:solid;border-color:rgba(241,238,232,.1)}
+.life-ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(to top,rgba(11,36,48,.9),transparent);color:var(--gelo);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:left;z-index:1}
+.life-ph img{transition:transform .8s var(--ease)}
+@media (hover:hover){.life-ph:hover img{transform:scale(1.05)}}
+.life-grid{grid-template-rows:240px 240px}
+@media (max-width:900px){.life-grid{grid-template-rows:200px 200px}}
 /* fachada */
 .fachada{margin:0;position:relative;min-height:400px;border-radius:var(--r);overflow:hidden;background:var(--gelo-2)}
 .fachada img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:40% 60%}
@@ -632,15 +638,15 @@ a.fachada{display:block;color:inherit}
         <h2 class="h2" id="life-t">Ele vive o que recomenda</h2>
         <p class="lead">Fora do consultório, o Dr. Diego treina jiu-jitsu. O tatame ensina o mesmo que ele aplica no cuidado: constância, técnica e respeito ao corpo.</p>
         <ul class="life-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Treino regular de jiu-jitsu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Faixa preta de jiu-jitsu, competindo em campeonatos</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sono, alimentação e exercício como base do tratamento</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Família, viagens e saúde em equilíbrio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B9784A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Jiu-jitsu também em família</li>
         </ul>
       </div>
       <div class="life-grid">
-        <figure class="life-ph lp-a"><span>[Foto no tatame]</span></figure>
-        <figure class="life-ph lp-b"><span>[Foto de treino]</span></figure>
-        <figure class="life-ph lp-c"><span>[Foto em família ou viagem]</span></figure>
+        <figure class="life-ph lp-a"><img src="jiu/jj-open.jpg" alt="Dr. Diego de quimono azul e faixa preta, mostrando a medalha no Floripa Fall International Open 2026" width="900" height="1200" loading="lazy" style="object-position:50% 38%"><figcaption>Floripa Fall International Open 2026 · IBJJF</figcaption></figure>
+        <figure class="life-ph lp-b"><img src="jiu/jj-paranaense.jpg" alt="Dr. Diego e um menino de quimono, ambos com medalhas, no Campeonato Paranaense de Jiu Jitsu 2026" width="675" height="1200" loading="lazy" style="object-position:50% 24%"><figcaption>Campeonato Paranaense 2026</figcaption></figure>
+        <figure class="life-ph lp-c"><img src="jiu/jj-academia.jpg" alt="Dr. Diego no tatame da academia, ao lado de um professor e de um menino de quimono" width="640" height="1136" loading="lazy" style="object-position:50% 40%"><figcaption>Jiu-jitsu também em família</figcaption></figure>
       </div>
     </div>
   </section>
