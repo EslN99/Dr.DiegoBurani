@@ -81,10 +81,15 @@ a{color:inherit}
 .photo-tag{position:absolute;left:20px;bottom:20px;right:20px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.12em;color:var(--gelo)}
 
 /* trust */
-.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--petroleo-2)}
+.trust{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;column-gap:32px;border-top:1px solid var(--petroleo-2)}
 .trust div{padding:36px 28px 8px 0;display:grid;gap:8px;align-content:start}
 .trust strong{font-family:var(--f-display);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:-0.03em;color:var(--gelo);font-variant-numeric:tabular-nums}
 .trust span{color:var(--texto-claro);font-size:15px}
+.trust strong{white-space:nowrap;line-height:1.15}
+.trust span{max-width:26ch}
+.trust .t-esp span{max-width:none}
+.trust .t-esp strong{font-variant-numeric:normal}
+.trust .t-esp{padding-right:0}
 
 /* services */
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -185,6 +190,7 @@ a{color:inherit}
   .hero-grid .photo{max-height:520px;width:100%}
   .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .trust{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust .t-esp{grid-column:1/-1}
   .steps{grid-template-columns:minmax(0,1fr);gap:28px}
   .steps::before{top:26px;bottom:26px;left:25px;right:auto;width:2px;height:auto}
   .step{grid-template-columns:52px minmax(0,1fr);column-gap:20px}
@@ -598,7 +604,7 @@ a.fachada{display:block;color:inherit}
         <div><strong data-to="40" data-suf="+ min">40+ min</strong><span>Duração mínima de cada consulta</span></div>
         <div><strong>3, 6 e 12</strong><span>Meses de acompanhamento estruturado</span></div>
         <div><strong>7 serviços</strong><span>Integrados em um só lugar</span></div>
-        <div><strong>2 títulos</strong><span>De especialista em Medicina de Emergência e Medicina Intensiva</span></div>
+        <div class="t-esp"><strong>2 Títulos de Especialista</strong><span>Medicina de Emergência e Medicina Intensiva</span></div>
       </div>
     </div>
   </section>
