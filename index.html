@@ -103,6 +103,7 @@ a{color:inherit}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
 .about .photo{aspect-ratio:4/5}
+@media (min-width:901px){.about .photo{position:sticky;top:calc(env(safe-area-inset-top,0px) + 104px)}}
 .about-txt{display:grid;gap:20px}
 .about-txt p{color:var(--texto-2);max-width:62ch}
 .timeline{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:0;border-left:2px solid var(--linha)}
