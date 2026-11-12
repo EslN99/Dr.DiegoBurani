@@ -57,6 +57,16 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,8.4vw,38px)
 .tx{flex:1;min-width:0;display:grid;gap:2px}
 .tx b{font-family:var(--f-display);font-weight:600;font-size:16.5px;letter-spacing:-.01em}
 .tx small{font-size:13px;color:var(--texto-claro)}
+.sv-wrap{display:grid;gap:10px;margin-top:6px}
+.sv-t{margin:0;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cobre-claro)}
+.sv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sv{display:grid;align-content:start;gap:4px;min-height:118px;padding:14px;border-radius:16px;background:var(--petroleo-2);border:1px solid var(--linha);transition:transform .2s var(--ease),background .2s,border-color .2s}
+.sv .ic{width:38px;height:38px;border-radius:10px;margin-bottom:6px}
+.sv .ic svg{width:20px;height:20px}
+.sv b{font-family:var(--f-display);font-weight:600;font-size:15px;letter-spacing:-.01em;line-height:1.25}
+.sv small{font-size:12.5px;color:var(--texto-claro);line-height:1.35}
+.sv:active{transform:scale(.97)}
+@media (hover:hover){.sv:hover{background:var(--petroleo-3);border-color:rgba(185,120,74,.5);transform:translateY(-2px)}}
 .go{flex:none;width:20px;height:20px;color:rgba(241,238,232,.45);transition:transform .2s var(--ease),color .2s}
 @media (hover:hover){.lk:hover .go{transform:translateX(3px);color:var(--cobre-claro)}}
 
@@ -74,7 +84,7 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,8.4vw,38px)
 /* consultório */
 .place{display:block;border-radius:20px;overflow:hidden;background:var(--petroleo-2);border:1px solid var(--linha)}
 .place-img{position:relative;aspect-ratio:16/10;overflow:hidden}
-.place-img img{width:100%;height:100%;object-fit:cover;object-position:40% 62%;transition:transform .6s var(--ease)}
+.place-img img{width:100%;height:100%;object-fit:cover;object-position:58% 62%;transition:transform .6s var(--ease)}
 @media (hover:hover){.place:hover .place-img img{transform:scale(1.04)}}
 .place-body{padding:16px 18px 18px;display:grid;gap:12px}
 .place-body b{font-family:var(--f-display);font-size:17px;font-weight:600}
@@ -135,16 +145,16 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(30px,8.4vw,38px)
         <span class="tx"><b>Agendar consulta</b><small>WhatsApp · resposta da equipe</small></span>
         <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
       </a></li>
-      <li class="rise" style="--d:780ms"><a class="lk" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20quero%20saber%20mais%20sobre%20reposi%C3%A7%C3%A3o%20hormonal." target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 9h6M9 15h6"/></svg></span>
-        <span class="tx"><b>Reposição hormonal</b><small>Andropausa e menopausa</small></span>
-        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-      </a></li>
-      <li class="rise" style="--d:860ms"><a class="lk" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20quero%20fazer%20uma%20avalia%C3%A7%C3%A3o%20de%20preven%C3%A7%C3%A3o%20cardiovascular." target="_blank" rel="noopener">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></span>
-        <span class="tx"><b>Check up do coração</b><small>ECG, Holter e MAPA no consultório</small></span>
-        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-      </a></li>
+      <li class="rise sv-wrap" style="--d:780ms"><p class="sv-t">Fale sobre o seu caso</p><div class="sv-grid">
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20reposi%C3%A7%C3%A3o%20hormonal.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 3v4M12 17v4M5 12H3M21 12h-2"/></svg></span><b>Reposição hormonal</b><small>Masculina e feminina</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20emagrecimento.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16l3-5 3 3 4-7"/><path d="M17 7h3v3"/></svg></span><b>Emagrecimento</b><small>Obesidade e massa magra</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20tratamento%20de%20lipedema.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v6c0 3.5-2 5.5-2 9a3 3 0 0 0 3 3h1.5"/><path d="M16 3v6c0 3.5 2 5.5 2 9a3 3 0 0 1-3 3h-1.5"/><path d="M8 9h8"/></svg></span><b>Lipedema</b><small>Dor e inchaço nas pernas</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20acompanhamento%20p%C3%B3s%20bari%C3%A1trica.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v3.5c0 1.7 1.3 3 3 3 4 0 7 2.8 7 6.6A4.4 4.4 0 0 1 15.6 21H10a6 6 0 0 1-6-6c0-2.3 1.4-4 3.6-4H10"/></svg></span><b>Pós bariátrica</b><small>E síndromes desabsortivas</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20tratamento%20de%20sarcopenia%20e%20ganho%20de%20massa%20muscular.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></span><b>Massa muscular</b><small>Sarcopenia e força</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20reposi%C3%A7%C3%A3o%20de%20vitaminas%20e%20micronutrientes.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><circle cx="17" cy="6" r="2"/><circle cx="6" cy="17" r="2"/></svg></span><b>Vitaminas</b><small>Micronutrientes</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20terapia%20intravenosa%20e%20medicamentos%20injet%C3%A1veis.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2l4 4M17 7l3-3M19 9l-8 8-4 1 1-4 8-8z"/><path d="M5 19l-3 3"/></svg></span><b>Terapia intravenosa</b><small>Injetáveis no consultório</small></a>
+        <a class="sv" href="https://wa.me/5543999304322?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20do%20Dr.%20Diego%20e%20tenho%20interesse%20em%20check%20up%20e%20preven%C3%A7%C3%A3o%20cardiovascular.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg></span><b>Check up do coração</b><small>ECG, Holter e MAPA</small></a>
+      </div></li>
       <li class="rise" style="--d:940ms"><a class="lk" href="../#congressos">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M7 12l3-3 2 2 4-4"/></svg></span>
         <span class="tx"><b>Congressos e mentoria</b><small>Palestras e atualização constante</small></span>
